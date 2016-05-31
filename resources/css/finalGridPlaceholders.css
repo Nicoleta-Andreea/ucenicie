@@ -1,0 +1,218 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 23, 2016, 11:45:53 AM
+    Author     : nicoleta.local
+*/
+
+body{
+    text-align:center;
+    background:#4e6680;
+    padding:30px 0;
+}
+.wrapper{
+    margin:0 auto; 
+    width:930px;
+    text-align:left;
+}
+.wrapper .nl-subscribe{
+    color:#475055;
+    background:#fff;
+    margin:0 0 20px 0;
+    padding:15px 30px 15px 30px;   
+}
+.wrapper .nl-subscribe select[name="nl_subscription"]{
+    float:left;
+    height:32px;
+    font-size:15px;
+}
+.wrapper .nl-subscribe .title{       
+    margin:0 30px 0px 0;
+    float:left;
+    line-height:30px;
+}
+.wrapper .row{
+    width:100%;
+}
+.wrapper .top{
+    height:60px;
+    background:#ffffff;
+} 
+.wrapper .row-2{
+    margin:15px 0 0 0;
+    height:675px;
+}
+.wrapper .row .column{
+    float:left;
+    height:100%;
+    border:0;
+    padding:0;
+    margin:0;
+}
+.wrapper .row-2 .column-1{
+    width:464px;
+    margin:0 15px 0 0;
+    height:675px;   
+}
+.wrapper .row-2 .column-2{
+    width:451px;    
+ }
+.wrapper .row-2 .column-1 .sub-column-1{
+    width:224px;
+}
+.wrapper .row-2 .column-1 .sub-column-2{
+    width:240px;
+    background:#f59678; 
+}
+.wrapper .row-2 .column-1 .sub-column-1 .row:first-of-type{
+    height:428px;
+}
+.wrapper .row-2 .column-1 .sub-column-1 .row:last-of-type{
+    height:246px;
+}
+.wrapper .row-2 .column-1 .sub-column-1 .row:first-of-type{
+    background:#000000;
+    width:100%;
+}
+.wrapper .row-2 .column-1 .sub-column-1 .row:last-of-type{
+    background:#bababa;
+    width:100%;    
+}
+.wrapper .row-2 .column-2 .row-1{
+    height:316px;   
+}
+.wrapper .row-2 .column-2 .row-1 .column:first-of-type{
+     width:217px;
+     background:#b0b54f;
+     margin:0 15px 0 0;
+}
+.wrapper .row-2 .column-2 .row-1 .column:last-of-type{
+    width:218px;
+}
+.wrapper .row-2 .column-2 .row-1 .column:last-child .row:first-of-type{
+    height:150px;
+    background:#13345f;    
+}
+.wrapper .row-2 .column-2 .row-1 .column:last-child .row:last-of-type{
+    height:150px;
+    margin:15px 0 0 0;
+    background:#30d5c7;
+}
+.wrapper .row-2 .column-2 .row-2{
+    margin:13px 0 0 0;
+}
+.wrapper .row-2 .column-2 .row-3{
+    margin:15px 0 0 0;
+}
+.wrapper .row-2 .column-2 .row-2,
+.wrapper .row-2 .column-2 .row-3{
+    height:163px;   
+}
+.wrapper .row-2 .column-2 .row-2{
+    background:#cb30d4;
+    width:450px;
+}
+.wrapper .row-2 .column-2 .row-3{
+    width:450px;
+    background:#f69206;
+}
+.wrapper .row-3{
+    height:300px;
+    margin:14px 0 0 0;
+    width:100%;
+    background:#06f51d; 
+}
+.wrapper .row-4{
+    height:300px;
+    margin:14px 0 0 0;
+}
+.wrapper .row-4 .column:first-of-type{
+    width:300px;
+    margin:0 15px 0 0;
+    background:#fff701;
+}
+.wrapper .row-4 .column:last-of-type{
+    width:615px;
+    background:#125b02;
+}
+.wrapper .row-5{
+    height:1384px;
+    margin:15px 0 0 0;
+}
+.wrapper .row-5 .column-1{
+    width:300px;
+    margin:0 15px 0 0;    
+}
+.wrapper .row-5 .column-2{
+    width:615px;
+}
+.wrapper .row-5 .column-1 .row-1{
+    height:438px;      
+}
+.wrapper .row-5 .column-1 .row-1{
+     background:#dd2726;
+     width:100%;
+}
+.wrapper .row-5 .column-1 .row-2{
+    height:535px;
+    margin:13px 0 0 0;
+}
+.wrapper .row-5 .column-1 .row-2{
+    background:#352736;
+    width:100%;
+}
+.wrapper .row-5 .column-1 .row-3{
+    height:384px;
+}
+.wrapper .row-5 .column-1 .row-3{
+   background:#c6c46d; 
+   width:100%;
+}
+.wrapper .row-5 .column-2 .row-1{
+    height:300px;    
+}
+.wrapper .row-5 .column-2 .row-1 .column-1{
+    width:301px;
+    margin:0 13px 0 0;
+    background:#f4989d;
+}
+.wrapper .row-5 .column-2 .row-1 .column-2{
+    width:301px;
+    background:#4f064d;
+}
+.wrapper .row-5 .column-2 .row-2{
+    height:602px;
+    margin:13px 0 0 0;
+}
+.wrapper .row-5 .column-2 .row-2{
+    width:100%;
+    background:#ff00f6;
+}
+.wrapper .row-5 .column-2 .row-3{
+    height:150px;
+    margin:13px 0 0 0;
+}
+.wrapper .row-5 .column-2 .row-3{
+    width:100%;
+    background:#c66e7a;
+}
+.wrapper .row-5 .column-2 .row-4{
+    height:280px;
+    margin:13px 0 0 0;
+    background:#6fc6a6;
+}
+.wrapper .calendar-wrapper .row .column{
+    border-right:1px solid #fff;
+}
+.nav-bar-container .icon.menu-bar-icon{
+    display:none;
+}
+.headline{
+    display:none;
+}
+.accordion-element{
+    display:block;
+}

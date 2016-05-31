@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 18, 2016, 10:14:57 AM
+    Author     : nicoleta.local
+*/
+
+.container{
+    width:614px;
+    height:300px;
+    margin:30px;
+    border:1px solid #000;
+}
+.simple-post-wrapper{
+    width:100%;
+    height:100%;
+}
+.simple-post-wrapper .left-post-section{
+    width:315px;
+    height:100%;
+    float:left;
+    background:#fff;    
+    padding:36px 0px;
+    color:#475055;
+}
+.simple-post-wrapper .left-post-section .icon-wrapper{
+    background:#4fc6f8;
+    color:#fff;
+    width:40px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    float:left;
+ }
+  .simple-post-wrapper .left-post-section .article-item{
+     padding:0px 25px 0px 20px;
+     width:275px;
+     float:left;
+    }
+ .simple-post-wrapper .left-post-section .article-item .article-text{
+     font-size:15px;
+     line-height:24px;
+     color:#787f82;
+     margin:30px 0px 0px 0px;
+ }
+ .simple-post-wrapper .left-post-section .article-item .article-text .read-more{
+     color:#ea6060;
+ }
+ simple-post-wrapper .left-post-section .article-item .timer{
+     font-size:15px;
+     color:#a3abaf;
+     margin:10px 0px 0px 0px;
+ }
+ .simple-post-wrapper .left-post-section .article-item .title{
+     font-size:24px;
+     line-height:30px;
+     font-weight:bold;
+     width:92%;
+     margin:5px 0px 0px 0px;
+ }
+ .simple-post-wrapper .right-post-section{
+     width:300px;
+     height:100%;
+     padding:36px;
+     background:#787878;
+     float:left;
+ }

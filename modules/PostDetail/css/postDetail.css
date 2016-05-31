@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 18, 2016, 5:44:50 PM
+    Author     : nicoleta.local
+*/
+.container{
+    width:614px;
+    height:600px;
+    margin:30px;
+    border:1px solid #000;
+}
+.detail-post-wrapper{
+    width:100%;
+    height:100%;
+    position:relative;
+    font-size:15px;
+}
+.detail-post-wrapper .top-post-section{
+    width:100%;
+    height:300px;
+    background:#787878;
+}
+.detail-post-wrapper .bottom-post-section{
+    background:#fff;
+    width:100%;
+    height:302px;
+    padding:30px 0px;
+}
+.detail-post-wrapper .bottom-post-section .article-item{
+     padding:0px 25px 0px 20px;
+     width:544px;
+     float:left;
+     color:#787f82;
+}
+.detail-post-wrapper .bottom-post-section .article-item .article-text{
+     font-size:15px;
+     line-height:24px;    
+     margin:30px 0px 0px 0px;
+}
+.detail-post-wrapper .bottom-post-section .article-item .title{
+     font-size:24px;
+     line-height:30px;
+     font-weight:bold;
+     margin:5px 0px 0px 0px;
+ }
+ .detail-post-wrapper .bottom-post-section .article-item .article-text .read-more{
+     color:#ea6060;
+ }
+ .detail-post-wrapper .bottom-post-section .icon-wrapper{
+    background:#4bc7c7;
+    color:#fff;
+    width:40px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    float:left;
+ }
+ .detail-post-wrapper .bottom-post-section .social-section{
+     width:100%;     
+     margin:32px 0px 0px 0px;
+     float:left;
+ }
+ .detail-post-wrapper .bottom-post-section .social-section .item{
+     float:left;
+     padding:0 25px 0 0;
+  }
+ .detail-post-wrapper .bottom-post-section .social-section .item .icon{
+      color:#56ccc8;
+      margin:0px 10px 0px 0px;
+      font-size:20px;
+ }
+.detail-post-wrapper .new-flag-wrapper{  
+    color: #fff;
+    height: 0px;
+    left: 0;
+    line-height: 60px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 0px;
+    border-right: 120px solid transparent;
+    border-top: 120px solid #ea6060; 
+}
+.detail-post-wrapper .new-flag{
+    transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    top:25px;
+    left:10px;
+    font-size:24px;
+    font-weight:400;
+}

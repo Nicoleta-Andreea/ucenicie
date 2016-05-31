@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 11, 2016, 12:57:58 PM
+    Author     : nicoleta.local
+*/
+.container{
+    width:224px;
+    margin:30px;
+    border:1px solid #000;
+}
+.vertical-menu{
+    width:100%;  
+    height:100%;
+    background:#fff;  
+ }
+.vertical-menu .item{
+    display:block;
+    padding:14px 20px 10px 20px;;
+    border-bottom:1px solid #e1e5e7;
+    color:#c5cdd1;
+    position: relative;
+}
+.vertical-menu .item:hover,
+.vertical-menu .item:active,
+.vertical-menu .item:focus,
+.vertical-menu .item:hover .item-descr,
+.vertical-menu .item:active .item-descr,
+.vertical-menu .item:focus .item-descr{
+    color:#fff;
+    background:#56ccc8;
+}
+.vertical-menu .item:last-of-type{
+    padding-top:15px;
+}
+.vertical-menu .item i{
+    width:36px;
+    height:36px;
+    margin:0px auto;
+    text-align:center;
+}
+.vertical-menu .item .item-descr{
+     font-size:16px;
+     line-height:36px;
+     color:#535c60;
+     font-weight:bold;
+     padding-left:25px;  
+     position: absolute;
+     top: 50%;
+     margin-top: -14px;
+}

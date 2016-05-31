@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Placeholders</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+         
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/general.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/font-awesome/css/font-awesome.css">        
+        <link rel="stylesheet" type="text/css" href="modules/MenuHorizontal/css/menuHorizontal.css">
+        <link rel="stylesheet" type="text/css" href="modules/MenuVertical/css/menuVertical.css"> 
+        <link rel="stylesheet" type="text/css" href="modules/Contact/css/contact.css"> 
+        <link rel="stylesheet" type="text/css" href="modules/Submenu/css/submenu.css">
+        <link rel="stylesheet" type="text/css" href="modules/SocialMenu/css/socialMenu.css">
+        <link rel="stylesheet" type="text/css" href="modules/SocialWidget/css/socialWidget.css">
+        <link rel="stylesheet" type="text/css" href="modules/SignIn/css/signIn.css">
+        <link rel="stylesheet" type="text/css" href="modules/Newsletter/css/newsletter.css">
+        <link rel="stylesheet" type="text/css" href="modules/Post/css/post.css">
+        <link rel="stylesheet" type="text/css" href="modules/ShareWidget/css/shareWidget.css">
+        <link rel="stylesheet" type="text/css" href="modules/SimplePost/css/simplePost.css">
+        <link rel="stylesheet" type="text/css" href="modules/LatestTweets/css/latestTweets.css">
+        <link rel="stylesheet" type="text/css" href="modules/News/css/news.css">
+        <link rel="stylesheet" type="text/css" href="modules/QuestionsForm/css/questions.css">
+        <link rel="stylesheet" type="text/css" href="modules/Calendar/css/calendar.css">
+        <link rel="stylesheet" type="text/css" href="modules/MoreStoriesWidget/css/moreStoriesWidget.css">
+        <link rel="stylesheet" type="text/css" href="modules/PostDetail/css/postDetail.css">
+        <link rel="stylesheet" type="text/css" href="modules/Quote/css/quote.css">
+        <link rel="stylesheet" type="text/css" href="modules/Tabs/css/tabs.css">
+        <link rel="stylesheet" type="text/css" href="modules/CookieDisclaimer/css/cookieDisclaimer.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/finalGridPlaceholders.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/responsive.css">
+        
+        <script src="resources/js/jquery/jquery-1.12.4.js"></script>
+        <script src="modules/MenuHorizontal/js/menuHorizontal.js"></script>
+        <script src="resources/js/jquery.cookie.js"></script>
+        <script src="modules/cookieDisclaimer/js/cookieDisclaimer.js"> </script>
+        <script src="resources/js/accordion/accordion.js"> </script>
+        <script src="resources/js/nl_subscription/nl_subscription.js"> </script>
+        <script src="resources/js/config.js"> </script>
+        <script src="resources/js/scripts.js"> </script>
+    </head>
+    <body>
+           <div class="wrapper clearfix">
+               <!-- cookie disclaimer -->
+                    <div class="cookie-disclaimer">
+                         <p class="message">
+                            This website uses cookies to ensure you get the best experience on our website. 
+                            Read more about cookies policy <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" target="_blank"> here </a>.
+                         </p>
+                        <div class="button">
+                             OK
+                        </div>
+                    </div>    
+               <!--end cookie disclaimer -->
+               
+               <!-- SELECT BOX FOR NL SUBSCRIBE MESSAGES-->
+                    <div class="row clearfix nl-subscribe">
+                        <span class="title">Newsletter subscribe</span> 
+                        <select name="nl_subscription" class="nl-config">
+                               <option value="nl_success" class="nl-option" selected>Success</option>
+                               <option value="nl_failed" class="nl-option">Failed</option>
+                               <option value="user_already_subscribed" class="nl-option">User already subscribed</option>
+                         </select>    
+                    </div> 
+               <!-- END SELECT BOX FOR NL SUBSCRIBE MESSAGES -->
+               
+               <div class="row top clearfix">                   
+                   <!-- HORIZONTAL MENU -->
+                       <nav class="nav-bar-container">
+                            <i class="fa fa-2x fa-bars menu-bar-icon icon"></i>
+                            <ul id="horizontalMenuLeft" class="horizontal-menu-left">
+                                <li class="item">
+                                    <a class="item-descr clearfix" href="#">Home</a>
+                                </li>
+                                <li class="item">
+                                    <a class="item-descr clearfix" href="#">Store</a>   
+                                </li>
+                                <li class="item">
+                                    <a class="item-descr clearfix" href="#">Blog</a>
+                                </li>
+                                <li class="item">
+                                    <a class="item-descr clearfix" href="#">About</a>
+                                </li>
+                                <li class="item">
+                                    <a class="item-descr clearfix" href="#">Contact</a>
+                                </li>
+                            </ul>   
+                            <ul id="horizontalMenuRight" class="horizontal-menu-right">
+                                <li class="item">
+                                   <span class="search-wrapper">
+                                       <i class="fa fa-x fa-search icon" id="searchIcon"></i> 
+                                       <input type="text" placeholder="Cauta ... " class="search-text" id="searchText" />  
+                                       <input type="button" value="Cauta" class="submit-search hide" id="submitSearch" />
+                                   </span>                        
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="item-descr">
+                                        <i class="fa fa-x fa-facebook icon social"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="item-descr">
+                                        <i class="fa fa-x fa-twitter icon social"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="item-descr">
+                                        <i class="fa fa-x fa-google-plus icon social"></i>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="item-descr">
+                                        <i class="fa fa-x fa-user icon"></i>
+                                    </a>
+                                </li>                    
+                            </ul>    
+                      </nav>                       
+                  <!-- END HORIZONTAL MENU -->              
+                </div> 
+                <div class="row row-2 clearfix">
+                    <div class="column column-1">
+                        <div class="column sub-column-1">
+                            <div class="row clearfix">
+                                <!--<div class="column">-->
+                                    <!-- VERTICAL MENU -->
+                                            <nav id="verticalMenu" class="vertical-menu accordion-element" data-accordion="true" data-title="Vertical Menu">
+                                                <a class="item" href="#">
+                                                    <i class="fa fa-2x fa-home"></i>
+                                                    <span class="item-descr">Home</span>
+                                                </a>
+                                                <a class="item" href="#">
+                                                    <i class="fa fa-2x fa-shopping-cart"></i>
+                                                    <span class="item-descr">Store</span>
+                                                </a>
+                                                <a class="item" href="#">
+                                                    <i class="fa fa-2x fa-pencil-square-o"></i>
+                                                    <span class="item-descr">Blog</span>
+                                                </a>
+                                                <a class="item" href="#">
+                                                    <i class="fa fa-2x fa-users"></i>
+                                                    <span class="item-descr">Community</span>
+                                                </a>
+                                                <a class="item" href="#">
+                                                    <i class="fa fa-2x fa-glass"></i>
+                                                    <span class="item-descr">Contests</span>
+                                                </a>
+                                                <a class="item" href="#">
+                                                    <i class="fa fa-2x fa-info-circle"></i>
+                                                    <span class="item-descr">About</span>
+                                                </a>
+                                                <a class="item contact" href="#">
+                                                    <i class="fa fa-2x fa-envelope-o"></i>
+                                                    <span class="item-descr">Contact</span>
+                                                </a>
+                                            </nav>                                        
+                                   <!-- END VERTICAL MENU -->
+                               <!-- </div> -->
+                            </div>
+                            <div class="row clearfix">
+                                <!--<div class="column">-->
+                                     <!-- CONTACT BOX -->
+                                            <section class="contact-details accordion-element" data-accordion="true" data-title="Contact">
+                                                <ul> 
+                                                     <li>
+                                                         <i class="fa fa-2x fa-phone"> </i>
+                                                         <p class="info">                                            
+                                                             (912) 555-1234 <br />
+                                                             (912) 555-5678 
+                                                         </p>
+                                                     </li>
+                                                     <li>
+                                                         <i class="fa fa-2x fa-map-marker"></i>
+                                                         <p class="info">
+                                                             1600 Pennsylvania  <br />
+                                                             Ave NW, Washington <br />
+                                                             DC 20500, USA  
+                                                         </p>
+                                                     </li>
+                                                     <li class="web">
+                                                         <i class="fa fa-2x fa-envelope"></i>
+                                                         <p class="info"> 
+                                                              hello@website.com <br />
+                                                              office@website.com 
+                                                         </p>                    
+                                                     </li>
+                                                </ul>    
+                                            </section>
+                                  <!--  END CONTACT BOX -->
+                                <!--</div>-->
+                            </div>    
+                        </div>   
+                        <div class="column sub-column-2">
+                            <!--  SUBMENU -->
+                                  <ul class="main-menu accordion-element" data-accordion="true" data-title="Submenu">
+                                        <li class="main-item first">
+                                            <span class="descr">Tech
+                                                   <span class="expandable">
+                                                       <span class="arrow"></span>
+                                                   </span>
+                                            </span>
+                                            <ul class="submenu">
+                                               <li class="item">
+                                                   <a href="#" class="descr">Software & Apps</a>
+                                               </li>    
+                                               <li class="item">
+                                                   <a href="#" class="descr">Gadgets</a>
+                                               </li>  
+                                               <li class="item">
+                                                   <a href="#" class="descr">Mobile</a> 
+                                               </li>  
+                                            </ul>    
+                                        </li>
+                                        <li class="main-item">
+                                             <span class="descr">Entertainment
+                                                   <span class="expandable">
+                                                       <span class="arrow"></span>
+                                                   </span>
+                                             </span>    
+                                             <ul class="submenu">
+                                                <li class="item">
+                                                    <a href="#" class="descr">Film</a> 
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Gaming</a>
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Music</a>
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Sport</a>
+                                                </li>  
+                                             </ul>   
+                                        </li>
+                                        <li class="main-item">
+                                            <span class="descr">Business
+                                                   <span class="expandable">
+                                                         <span class="arrow"></span>
+                                                   </span>
+                                            </span>    
+                                            <ul class="submenu">
+                                                <li class="item">
+                                                    <a href="#" class="descr">Job</a> 
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Marketing</a> 
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Media</a>
+                                                </li>  
+                                            </ul>   
+                                        </li>
+                                        <li class="main-item">
+                                            <span class="descr">Lifestyle
+                                               <span class="expandable">
+                                                     <span class="arrow"></span>
+                                               </span>
+                                            </span>   
+                                            <ul class="submenu">
+                                                <li class="item">
+                                                    <a href="#" class="descr">Home</a> 
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Health & Fitness</a>
+                                                </li>  
+                                                <li class="item">
+                                                    <a href="#" class="descr">Travel & Leisure</a>
+                                                </li>  
+                                            </ul>   
+                                        </li>
+                                   </ul>                                
+                           <!--  END SUBMENU -->                            
+                        </div>   
+                    </div>  
+                    <div class="column column-2">
+                           <div class="row row-1 clearfix">
+                                <div class="column">
+                                     <!-- SOCIAL MENU -->
+                                        <nav class="social-menu-list clearfix accordion-element" data-accordion="true" data-title="Social Menu">
+                                            <a href="#" class="item">
+                                                <i class="fa fa-x fa-facebook icon"></i>
+                                                Facebook
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="fa fa-x fa-twitter icon"></i>
+                                                Twitter
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="fa fa-x fa-google-plus icon"></i>
+                                                Google +
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="fa fa-x fa-rss icon"></i>
+                                                Rss Feeds
+                                            </a>
+                                            <a href="#" class="item">
+                                               <i class="fa fa-x fa-pinterest icon"></i>
+                                               Pinterest
+                                            </a>
+                                        </nav>    
+                                    <!-- END SOCIAL MENU -->
+                                </div>  
+                                <div class="column">
+                                     <div class="row">
+                                         <!-- FACEBOOK WIDGET -->
+                                             <div class="social-widget facebook-widget accordion-element" data-accordion="true" data-title="Facebook widget">                
+                                                    <i class="fa fa-2x fa-facebook social-icon"> </i>                  
+                                                    <span class="counter-section" id="noOfLike">
+                                                         156K
+                                                    </span>                 
+                                                    <a class="follow" href="#">
+                                                        Follow <i class="fa fa fa-plus"></i>
+                                                    </a>
+                                             </div>
+                                         <!-- END FACEBOOK WIDGET -->
+                                     </div>
+                                     <div class="row">
+                                         <!-- TWITTER WIDGET-->
+                                             <div class="social-widget twitter-widget accordion-element" data-accordion="true" data-title="Twitter widget">
+                                                    <i class="fa fa-2x fa-twitter social-icon"> </i>                
+                                                    <span class="counter-section" id="noOfTweets"> 
+                                                       89K
+                                                    </span>                
+                                                    <a class="follow" href="#">
+                                                        Followed <i class="fa fa-x fa-check-circle"></i>
+                                                    </a>
+                                             </div>   
+                                         <!-- END TWITTER WIDGET -->
+                                     </div>    
+                                </div> 
+                            </div>   
+                            <div class="row row-2">
+                                <!--<div class="column">-->
+                                     <!-- SIGN IN WIDGET -->
+                                         <div class="sign-in-wrapper clearfix">
+                                            <div class="sign-in-text-wrapper">
+                                                <p class="sign-in-title">
+                                                    Sign In
+                                                </p>
+                                                <p class="sign-in-text"> 
+                                                    Just select your favorite social-network to get started
+                                                </p>
+                                            </div>
+                                            <div class="social-icon-list-wrapper">                 
+                                               <p class="social-icon-list">                   
+                                                       <a href="#" class="social-icon-item facebook"><i class="fa fa-x fa-facebook icon"></i></a>              
+                                                       <a href="#" class="social-icon-item twitter"><i class="fa fa-x fa-twitter icon"></i></a>                                          
+                                                       <a href="#" class="social-icon-item google"><i class="fa fa-x fa-google-plus icon"></i></a>                    
+                                                       <a href="#" class="social-icon-item linkedin"><i class="fa fa-x fa-linkedin icon"></i></a>
+                                               </p>
+                                            </div> 
+                                        </div>    
+                                     <!-- END SIGN IN WIDGET -->
+                                <!--</div>--> 
+                            </div> 
+                            <div class="row row-3">
+                                <!--<div class="column">-->
+                                    <!-- NEWSLETTER -->
+                                        <div class="newsletter-wrapper">
+                                                <p class="title-wrapper">Join The Newsletter</p>
+                                                <p class="signup-message">Sign up for our personalized daily newsletter</p>
+
+                                                <form class="signup-section" onsubmit="return false;">
+                                                     <input class="email-address" type="email" placeholder="Enter email address" required /> 
+                                                     <input class="submit-button" type="submit" value="sign up" />
+                                                     <div class="subscribe-message"></div>
+                                                </form>    
+                                         </div>  
+                                    <!-- END NEWSLETTER -->
+                                <!--</div>--> 
+                            </div>                          
+                    </div>    
+                </div>
+                <div class="row row-3 clearfix">
+                   <!-- <div class="column"> -->
+                          <!-- POST -->
+                          <div class="post-wrapper">
+                                  <section class="article-wrapper left-post-section">
+                                      <div class="icon-wrapper">
+                                          <i class="fa fa-x fa-video-camera icon"></i>
+                                      </div>    
+                                      <article class="article-item">
+                                          <h2 class="title">Best story you have ever heard</h2>
+                                          <p class="timer">24 minutes ago</p>
+                                          <p class="article-text">
+                                              Lorem Ipsum is simply dummy 
+                                              text of the printing and typesetting
+                                              industry. Lorem ipsum has been
+                                              the industry's... <a href="#" class="read-more">Read more</a>                             
+                                          </p>
+                                      </article>    
+                                  </section>
+
+                                  <div class="social-section-wrapper">
+                                     <a href="#" class="item-descr">
+                                          <i class="fa fa-2x fa-heart-o icon"></i>
+                                          <span class="descr">Like</span>
+                                      </a>
+                                      <a href="#" class="item-descr">
+                                         <i class="fa fa-2x fa-clock-o icon"></i>
+                                          <span class="descr">Later</span>
+                                      </a>                   
+                                      <a href="#" class="item-descr">
+                                         <i class="fa fa-2x fa-share-square-o icon"></i>
+                                         <span class="descr">Share</span>
+                                      </a>                    
+                                  </div>  
+
+                                  <section class="youtube-video-wrapper">
+                                      <iframe class="youtube-video" src="http://www.youtube.com/embed/XGSy3_Czz8k">
+                                      </iframe>
+                                  </section>    
+                          </div> 
+                          <!-- END POST -->
+                    <!--</div>-->    
+                </div>  
+                <div class="row row-4 clearfix">
+                    <div class="column">
+                        <!-- SHARE WIDGET -->
+                            <div class="share-widget">
+                                   <div class="share-section">
+                                        <a href="#" class="item">
+                                            <i class="fa fa-2x fa-share-square-o icon"></i>
+                                            <span class="counter-section">1,325</span>
+                                        </a>    
+                                        <a href="#" class="item">
+                                            <i class="fa fa-2x fa-heart icon"></i>
+                                            <span class="counter-section">682</span>
+                                        </a>    
+                                    </div>    
+                            </div>    
+                        <!-- END SHARE WIDGET -->
+                    </div> 
+                    <div class="column">
+                        <!-- SIMPLE POST -->
+                        <div class="simple-post-wrapper">
+                            <section class="article-wrapper left-post-section">
+                                <div class="icon-wrapper">
+                                    <i class="fa fa-x fa-camera icon"></i>
+                                </div>    
+                                <article class="article-item">
+                                    <h2 class="title">
+                                        Here's What <br />
+                                        Instagram Ads Will <br />
+                                        Look Like
+                                    </h2>
+                                    <p class="timer">3 hours ago</p>
+                                    <p class="article-text">
+                                        Lorem Ipsum is simply dummy 
+                                        text of the printing and typesetting
+                                        industry.... <a href="#" class="read-more">Read more</a>                             
+                                    </p>
+                                </article>    
+                            </section>                
+
+                            <section class="right-post-section">
+
+                            </section>    
+                        </div>    
+                        <!-- END SIMPLE POST -->
+                    </div> 
+                </div> 
+                <div class="row row-5 clearfix">
+                     <div class="column column-1">
+                         <div class="row row-1 clearfix">
+                             <!--<div class="column column-1">-->
+                                 <!-- LATEST TWEETS -->
+                                   <ul class="latest-tweets-wrapper">
+                                        <li class="item">
+                                            Alex White @Alex White 
+                                            <span class="icon-wrapper">
+                                                <i class="fa fa-check"></i>
+                                            </span>
+                                        </li>
+                                        <li class="item">
+                                            Singolo is a free PSD template <br />
+                                            of a flat, single page website <br />
+                                            created by <a href="#" class="link">@PsdChat</a> <a href="#" class="link">#freebie</a> <br />
+                                            <a href="#" class="link">#psd</a><a href="#" class="link"> http://bit.ly/19XM8LJ</a>
+
+                                            <p class="time-counter">2 hours ago </p>
+                                        </li>
+                                        <li class="item">
+                                            Saturday Career Workshops <br />
+                                            are back at ADC! See what high <br />
+                                            school students created this <br />
+                                            week: <a href="#" class="link">http://bit.ly/Xx1EsL</a>
+
+                                            <p class="time-counter"> 6 hours ago</p>
+                                        </li>
+                                    </ul>                                
+                                 <!-- END LATEST TWEETS -->
+                             <!--</div>-->
+                         </div> 
+                         <div class="row row-2 clearfix">
+                            <!-- <div class="column column-2"> -->
+                                 <!-- NEWS -->  
+                                    <div class="news-wrapper clearfix">
+                                            <div class="news-header">
+                                                <h2 class="title">What's Hot</h2>
+                                                <ul class="bullets-list">
+                                                    <li class="bullet-wrapper">
+                                                        <a href="#" class="bullet"></a>
+                                                    </li>
+                                                    <li class="bullet-wrapper">
+                                                        <a href="#" class="bullet"></a>
+                                                    </li>
+                                                    <li class="bullet-wrapper">
+                                                        <a href="#" class="bullet"></a> 
+                                                    </li>
+                                                </ul>
+                                            </div>    
+                                            <ul class="news-list clearfix">
+                                                <li class="item clearfix">
+                                                    <div class="icon-wrapper news-1">
+                                                        <i class="fa fa-3x fa-smile-o icon" aria-hidden="true"></i>
+                                                    </div> 
+                                                   <div class="news-section">
+                                                       <p class="news-text">
+                                                          <a href="#" class="link">
+                                                                A New Yorker doesn't 
+                                                                bla bla  bla bla  bla bla  bla bla  bla bla  bla bla  bla bla  bla bla
+                                                                necessarily come from 
+                                                          </a>
+                                                       </p>
+                                                       <p class="time">
+                                                           3 minutes ago
+                                                       </p>
+                                                   </div>
+                                                </li>
+                                                <li class="item clearfix">
+                                                   <div class="icon-wrapper news-2"></div>
+                                                   <div class="news-section">
+                                                       <p class="news-text">
+                                                           <a href="#" class="link">
+                                                                A New Yorker never
+                                                                looks up
+                                                           </a>
+                                                       </p>
+                                                       <p class="time">
+                                                           7 hours ago
+                                                       </p>
+                                                   </div>
+                                                </li>
+                                                <li class="item clearfix">
+                                                    <div class="icon-wrapper news-3">
+                                                        <i class="fa fa-3x fa-cab icon" aria-hidden="true"></i>
+                                                    </div> 
+                                                   <div class="news-section">
+                                                       <p class="news-text">
+                                                          <a href="#" class="link"> 
+                                                                A New Yorker doesn't
+                                                                take cabs
+                                                           </a>
+                                                       </p>
+                                                       <p class="time">
+                                                           23 hours ago
+                                                       </p>
+                                                   </div>
+                                                </li>
+                                                <li class="item clearfix">
+                                                   <div class="icon-wrapper news-4"></div> 
+                                                   <div class="news-section">
+                                                       <p class="news-text">
+                                                          <a href="#" class="link">
+                                                                A New Yorker views
+                                                                celebrities as regular
+                                                          </a> 
+                                                       </p>
+                                                       <p class="time">
+                                                           1 day ago
+                                                       </p>
+                                                   </div>
+                                                </li>
+                                                <li class="item clearfix">
+                                                    <div class="icon-wrapper news-5"></div> 
+                                                    <div class="news-section">
+                                                       <p class="news-text">
+                                                           <a href="#" class="link">
+                                                                A New Yorker never
+                                                                looks up
+                                                           </a>
+                                                       </p>
+                                                        <p class="time">
+                                                            2 days ago
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>    
+                                     </div>       
+                                 <!-- END NEWS -->  
+                             <!--</div>-->
+                         </div>  
+                         <div class="row row-3 clearfix">
+                             <!--<div class="column column-3">-->
+                                 <!-- QUESTIONS FORM -->
+                                    <div class="questions-wrapper">
+                                        <p class="title-wrapper">Ask a Question</p>
+                                        <form action="#" method="post" class="questions-section">
+                                             <input class="name field" type="text" placeholder="Your name" maxlength="100" required />
+                                             <input class="email-address field" type="email" placeholder="Enter email address" required /> 
+                                             <textarea class="question" placeholder="Your question"  required ></textarea>
+                                             <input class="submit-button" type="submit" value="submit" />
+                                        </form>                    
+                                    </div>
+                                 <!-- END QUESTIONS FORM -->
+                             <!--</div>-->
+                         </div>  
+                     </div>   
+                     <div class="column column-2">
+                         <!-- CALENDAR -->
+                         <div class="row row-1 clearfix">
+                                                <div class="column column-1">
+                                                     <div class="calendar-wrapper">
+                                   <div class="calendar-header">
+                                      <div class="column prev">&lt; Oct</div>
+                                      <div class="column current">November</div>
+                                      <div class="column next">Dec &gt;</div>
+                                   </div>    
+                                   <div class="row">
+                                       <div class="column"></div> 
+                                       <div class="column"></div> 
+                                       <div class="column"></div> 
+                                       <div class="column"></div> 
+                                       <div class="column countering-col resseting-col bg-1"></div> 
+                                       <div class="column countering-col bg-2"></div> 
+                                       <div class="column last countering-col bg-2"></div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="column countering-col  bg-1 .resseting-col"></div> 
+                                       <div class="column countering-col  bg-1"></div> 
+                                       <div class="column countering-col  bg-3"></div> 
+                                       <div class="column countering-col  bg-1"></div> 
+                                       <div class="column countering-col  bg-1"></div> 
+                                       <div class="column countering-col  bg-2"></div> 
+                                       <div class="column last countering-col  bg-2"></div>
+                                   </div> 
+                                   <div class="row">
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-4"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-2"></div> 
+                                       <div class="column last countering-col bg-2"></div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-2"></div> 
+                                       <div class="column last countering-col bg-2"></div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-1"></div> 
+                                       <div class="column countering-col bg-2"></div> 
+                                       <div class="column last"></div>
+                                   </div>
+                               </div>
+                               <!-- END CALENDAR -->                     
+                             </div>
+                             <div class="column column-2">
+                                 <!-- MORE STORIES WIDGET-->
+                                    <div class="more-stories-widget-wrapper">
+                                        <a class="more-link" href="#">
+                                            View more stories 
+                                            <p class="icon">
+                                                <span class="arrow"></span>
+                                            </p>
+                                        </a>    
+                                    </div>   
+                                 <!-- END MORE STORIES WIDGET -->
+                             </div>
+                         </div>   
+                         <div class="row row-2 clearfix">
+                             <!--<div class="column">-->
+                                 <!-- POST DETAIL-->
+                                        <div class="detail-post-wrapper">
+                                            <div class="new-flag-wrapper"></div>    
+                                            <div class="new-flag">new</div>    
+                                            <section class="top-post-section">
+
+                                            </section>  
+                                            <section class="bottom-post-section">
+                                                 <div class="icon-wrapper">
+                                                     <i class="fa fa-file-text"></i>
+                                                 </div>    
+                                                 <article class="article-item">
+                                                     <h2 class="title">
+                                                         What is Lorem Ipsum?
+                                                     </h2>
+                                                     <p class="article-text">
+                                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                         Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                         1500s, when an unknown printer took a gallery of type and scrambled it to 
+                                                         make a type specimen book. It has survived not only five centuries, but 
+                                                         also the leap into electronic typesetting ... <a href="#" class="read-more">Read more</a>                                                          
+                                                     </p>
+                                                     <ul class="social-section">
+                                                         <li class="item">
+                                                             <i class="fa fa-2x fa-share-square-o icon" aria-hidden="true"></i> 569 Shares
+                                                         </li>
+                                                         <li class="item">
+                                                             <i class="fa fa-2x fa-eye icon" aria-hidden="true"></i> 3,152 Views
+                                                         </li>
+                                                         <li class="item">
+                                                             <i class="fa fa-2x fa-comment icon" aria-hidden="true"></i> 21 Comments
+                                                         </li>
+                                                     </ul>
+                                                 </article>    
+                                            </section>  
+                                        </div>    
+                                 <!-- POST DETAIL-->
+                            <!-- </div> -->
+                         </div> 
+                         <div class="row row-3 clearfix">
+                             <!--<div class="column">-->
+                                  <!-- QUOTE -->
+                                       <div class="quote-wrapper">
+                                            <div class="icon-wrapper">
+                                                <i class="fa fa-x fa-quote-right icon" aria-hidden="true"></i>
+                                            </div>   
+                                            <div class="quote"> 
+                                                If you don't like something, change it. <br />
+                                                If you can't change it, change the way you
+                                                think about it
+                                            </div>
+                                        </div>    
+                                  <!-- END QUOTE -->
+                             <!--</div>-->
+                         </div>
+                         <div class="row row-4 clearfix">
+                             <!--<div class="column">-->
+                                 <!-- TABS -->
+                                    <div class="tabs-wrapper clearfix">
+
+                                    <input id="tab1" class="tab" type="radio" name="tabs" />
+                                    <label for="tab1" class="item-descr">About</label>
+
+
+                                    <input id="tab2" class="tab" type="radio" name="tabs" checked/>
+                                    <label for="tab2" class="item-descr">Team</label>
+
+                                    <input id="tab3" class="tab" type="radio" name="tabs" />
+                                    <label for="tab3" class="item-descr">Privacy</label>
+
+
+                                     <input id="tab4" class="tab" type="radio" name="tabs" />
+                                     <label for="tab4" class="item-descr">Advertise</label>
+
+                                     <input id="tab5" class="tab" type="radio" name="tabs" />
+                                     <label for="tab5" class="item-descr">Contact</label>
+
+                                      <div class="tabs-content-wrapper clearfix">
+                                           <div id="content1" class="content clearfix">
+                                                 content1
+                                           </div>
+                                           <div id="content2" class="content clearfix">                        
+                                              <section class="post-section">
+                                                  <div class="profile">
+                                                      <div class="picture-wrapper">
+
+                                                      </div>
+                                                      <div class="name-wrapper">
+                                                          <p class="name">Anne Hathaway</p>
+                                                          <p class="position">CEO/Founder</p>
+                                                      </div> 
+                                                      <p class="description">
+                                                          "Lorem Ipsum is simply dummy text
+                                                          of the printing and typesetting
+                                                          industry. Lorem Ipsum has ..."
+                                                      </p>  
+                                                      <p class="email"> 
+                                                          @annehataway
+                                                      </p>
+                                                  </div>
+                                              </section>    
+                                              <section class="post-section">
+                                                    <div class="profile">
+                                                      <div class="picture-wrapper">
+
+                                                      </div>
+                                                      <div class="name-wrapper">
+                                                           <p class="name">Kate Upton</p>
+                                                           <p class="position">Co-Founder</p>
+                                                      </div>    
+                                                      <p class="description">
+                                                          Lorem Ipsum is simply dummy text
+                                                          of the printing and typesetting
+                                                          industry. Lorem Ipsum has ...
+                                                      </p>    
+                                                      <p class="email"> 
+                                                         @kateupton
+                                                      </p>
+                                                  </div>
+                                              </section>  
+                                          </div>
+                                           <div id="content3" class="content clearfix">
+                                              content3
+                                          </div>
+                                           <div id="content4" class="content clearfix">
+                                              content4
+                                          </div>
+                                           <div id="content5" class="content clearfix">
+                                              content5
+                                          </div>
+                                      </div>    
+                                  </div>    
+                                 <!-- END TABS -->
+                             <!--</div>-->
+                         </div>
+                         
+                     </div> 
+                </div>    
+            </div>             
+    </body>
+</html>

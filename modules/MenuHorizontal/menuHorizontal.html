@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Horizontal Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>           
+        <link rel="stylesheet" type="text/css" href="../../resources/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/general.css">
+        <link rel="stylesheet" type="text/css" href="../../resources/css/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/menuHorizontal.css">  
+        
+        <!--<link rel="stylesheet" type="text/css" href="http://localhost/first_project/first_app/public_html/resources/css/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/first_project/first_app/public_html/resources/css/general.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/first_project/first_app/public_html/resources/css/normalize.css">-->      
+        
+        <script src="../../resources/js/jquery/jquery-2.2.3.js"></script>
+        <script src="js/menuHorizontal.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="nav-bar-container">
+                <i class="fa fa-2x fa-bars menu-bar-icon icon"></i>
+                <ul id="horizontalMenuLeft" class="horizontal-menu-left">
+                    <li class="item">
+                        <a class="item-descr clearfix" href="#">Home</a>
+                    </li>
+                    <li class="item">
+                        <a class="item-descr clearfix" href="#">Store</a>   
+                    </li>
+                    <li class="item">
+                        <a class="item-descr clearfix" href="#">Blog</a>
+                    </li>
+                    <li class="item">
+                        <a class="item-descr clearfix" href="#">About</a>
+                    </li>
+                    <li class="item">
+                        <a class="item-descr clearfix" href="#">Contact</a>
+                    </li>
+                </ul>   
+                <ul id="horizontalMenuRight" class="horizontal-menu-right">
+                    <li class="item">
+                       <span class="search-wrapper">
+                           <i class="fa fa-x fa-search icon" id="searchIcon"></i> 
+                           <input type="text" placeholder="Cauta ... " class="search-text" id="searchText" />  
+                           <input type="button" value="Cauta" class="submit-search hide" id="submitSearch" />
+                       </span>                        
+                    </li>
+                    <li class="item">
+                        <a href="#" class="item-descr">
+                            <i class="fa fa-x fa-facebook icon social"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="item-descr">
+                            <i class="fa fa-x fa-twitter icon social"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="item-descr">
+                            <i class="fa fa-x fa-google-plus icon social"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="item-descr">
+                            <i class="fa fa-x fa-user icon"></i>
+                        </a>
+                    </li>                    
+                </ul>    
+            </nav>    
+        </div>
+    </body>
+</html>

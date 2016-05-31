@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2016, 2:29:45 PM
+    Author     : nicoleta.local
+*/
+.container{
+    width:615px;
+    height:291px;
+    margin:30px;
+    border:1px solid #000;
+}
+.tabs-wrapper{
+    background:#fff;
+    width:100%;
+    height:100%;
+}
+.tabs-content-wrapper{
+    width:100%;
+    height:236px;
+}
+.tabs-wrapper  .item-descr{
+    width:20%;
+    height:49px;
+    line-height:49px;   
+    font-size:16px;
+    text-align:center;
+    background:#c5cdd1;
+    color:#fff;
+    display:block;
+    cursor:pointer;
+    float:left;
+    border-right:1px solid rgba(120, 120, 120, 0.6);
+    border-bottom:1px solid rgba(197, 205, 209, 0.2); 
+}
+.tabs-wrapper .item-descr:last-of-type{
+    border-right:0;
+}
+.tabs-wrapper .tab{
+    display:none;
+}
+.tabs-wrapper .tab:checked + .item-descr{
+    background:#fff;
+    color:#475055;
+}
+.tabs-content-wrapper .content{
+    display:none;
+    color:#475055;
+    font-size:15px;
+    padding:29px 30px 28px 30px;
+    width:100%;
+}
+#tab1:checked ~ .tabs-content-wrapper #content1,
+#tab2:checked ~ .tabs-content-wrapper #content2,
+#tab3:checked ~ .tabs-content-wrapper #content3,
+#tab4:checked ~ .tabs-content-wrapper #content4,
+#tab5:checked ~ .tabs-content-wrapper #content5{
+     display: block;
+}
+.tabs-content-wrapper .content .post-section{
+    float:left;
+    width:260px;   
+}
+.tabs-content-wrapper .content .post-section .name-wrapper{
+    width:175px;
+    margin:0 0 0 30px;
+    float:left;
+    line-height:2em;
+}
+.tabs-content-wrapper .content .post-section .name-wrapper .name{
+    font-size:24px;
+    font-weight:bold;
+    margin:0;
+}
+.tabs-content-wrapper .content .post-section .name-wrapper .position{
+    color:#a3abaf;
+    margin:0;
+}
+.tabs-content-wrapper .content .post-section:first-of-type{
+    margin:0 30px 0 0;
+}
+.tabs-content-wrapper .content .post-section .description{
+    float:left;
+    color:#60676c;
+    line-height:20px;
+}
+.tabs-content-wrapper .content .post-section .email{
+    color:#4fc6f8;
+    float:left;
+    margin:10px 0 0 0;
+}
+.tabs-content-wrapper .content .profile .picture-wrapper{
+    float:left;
+    width:55px;
+    height:55px;
+    background:#787878;
+}

@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 11, 2016, 3:09:27 PM
+    Author     : nicoleta.local
+*/
+.container{
+    width:930px;
+    margin:30px;
+    border:1px solid #000;
+}
+.nav-bar-container{
+    width:100%;      
+    height:60px;
+    padding:0px;
+    background: #FFF;
+}
+.nav-bar-container .icon{
+    text-align:center;   
+    float:left;
+    width:60px;
+    height:60px;   
+    line-height:60px;
+    margin:0px auto; 
+    cursor:pointer;
+}
+.nav-bar-container .icon.menu-bar-icon,
+.horizontal-menu-right .submit-search:hover,
+.horizontal-menu-right .submit-search:focus,
+.horizontal-menu-right .submit-search:active{     
+    background:#56ccc8;
+    color:#fff;    
+}
+.nav-bar-container .icon.social{
+    width:40px;
+    line-height:60px;  
+}
+.nav-bar-container .icon.social.fa-facebook{
+    padding:0px 0px 0px 15px;
+}
+.nav-bar-container .icon.social.fa-google-plus{
+    padding:0px 15px 0px 0px;
+}
+.nav-bar-container .icon.fa-search{
+    border-right:1px solid #dde2e4;
+}
+.nav-bar-container .icon.fa-user{
+    border-left:1px solid #dde2e4;
+}
+.nav-bar-container .item{   
+    line-height:60px;
+    font-size:16px;
+    float:left;   
+    position:relative;
+}
+.nav-bar-container .item .item-descr{
+     color:#475055; 
+}
+.horizontal-menu-left .item{
+     padding-left:48px; 
+     padding:0px 0px 0px 48px;
+     color:#475055; 
+}
+.horizontal-menu-left{
+    float:left;
+}
+.horizontal-menu-left .item .item-descr:hover,
+.horizontal-menu-left .item .item-descr:active,
+.horizontal-menu-left .item .item-descr:focus{
+    color:#56ccc8;
+}
+.horizontal-menu-right{
+    float:right;
+}
+.horizontal-menu-right .item,
+.horizontal-menu-right .item .item-descr{      
+    color:#c1c7ca;
+}
+.horizontal-menu-right .search-wrapper{
+    display:block;    
+    height:60px;
+    width:60px;
+    position:relative;
+    float:left;
+}
+.horizontal-menu-right .search-wrapper.visible{
+    width:200px;    
+}
+.horizontal-menu-right .search-wrapper.visible .icon.fa-search{  
+    border-right:0px;
+    position: absolute;
+    z-index: 1;
+    left:0px;
+    width:40px;
+    text-align:right;
+}
+.horizontal-menu-right .search-text{
+    width:190px;    
+    position:absolute;  
+    font-size:14px;
+    font-style:italic;
+    border:0px;
+    border-style:solid;
+    border-width:0px 1px 0px 0px;
+    border-color:#dde2e4;
+    height:60px;
+    padding:0px 10px 0 40px;
+    left: 10px;  
+    z-index: -1;
+}
+.horizontal-menu-right .visible .search-text{
+    z-index: 0; 
+}
+.horizontal-menu-right .submit-search{
+    position: absolute;
+    top: 60px;
+    left: 23px;
+    width: 177px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0px 0px 30px 30px;
+    background: #fff;
+    border: 1px solid #dde2e4;
+    cursor: pointer;
+    color:#475055;
+    z-index:1;
+}
+.horizontal-menu-right .search-text:focus{              
+        color:#475055;
+        font-style:normal;
+}

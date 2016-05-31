@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 20, 2016, 12:14:58 PM
+    Author     : nicoleta.local
+*/
+.container{
+    margin:30px;
+    width:614px;
+    height:149px;
+    border:1px solid #000;
+}
+.quote-wrapper{
+    padding:30px 0px;
+    background:#fff;
+    width:100%;
+    height:100%;
+}
+.quote-wrapper .icon-wrapper{
+    float:left;
+    margin:0px; 
+    width:40px;
+    height:40px; 
+    text-align:center;
+    line-height:40px;
+    background:#4bc7c7;
+}
+.quote-wrapper .icon-wrapper .icon{
+    color:#fff;
+}
+.quote-wrapper .quote{
+    background:#fff;
+    color:#848a8e;
+    width:497px;
+    float:left;
+    margin:0px 0px 0px 52px;
+    font-size:24px;
+    line-height:1.3em;
+    position:relative;
+    font-style:italic;
+}
+.quote-wrapper .quote:before{
+    content:'“'; 
+    position:absolute;
+    left:-0.7em;
+    top:0px;
+    font-style:italic;
+}
+.quote-wrapper .quote:after{
+    content:'”';
+    position:absolute;    
+    bottom:0;
+    padding:0 0 0 0.3em;
+    font-style:italic;
+}

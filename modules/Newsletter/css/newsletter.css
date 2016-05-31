@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 17, 2016, 2:32:46 PM
+    Author     : nicoleta.local
+*/
+
+.container{
+    width:450px;
+    height:165px;
+    border:1px solid #000;
+    margin:30px;
+}
+.newsletter-wrapper{
+    width:100%;
+    height:100%;
+    padding:20px;
+    text-align:center;
+    background:#fff;
+    color:#475055;
+    position:relative;
+}
+.newsletter-wrapper .title-wrapper{
+    font-size:24px;
+    line-height:24px;
+    margin:10px 0px 0px 0px;
+}
+.newsletter-wrapper .signup-message{
+    font-size:13px;
+    margin:10px 0px 0px 0px;
+}
+.newsletter-wrapper .signup-section{
+    margin:23px 0px 0px 0px;
+}
+.newsletter-wrapper .signup-section .email-address{
+    height:38px;
+    line-height:38px;
+    padding:0px 20px;
+    font-size:15px;
+    color:#afb6ba;
+    border:1px solid #dde2e4;
+    width:287px;
+}
+.newsletter-wrapper .signup-section .submit-button{
+    width:97px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    text-transform:uppercase;
+    color:#fff;
+    background:#ea6060;
+    border:0;
+    border-radius:3px;
+    margin:0px 0px 0px 15px;
+    cursor:pointer;
+}
+.newsletter-wrapper .subscribe-message{
+    position:absolute;
+    top:10px;
+    font-style:italic;
+    color:#f00;
+}

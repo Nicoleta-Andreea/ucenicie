@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 18, 2016, 10:54:46 AM
+    Author     : nicoleta.local
+*/
+.container{
+    width:300px;
+    height:439px;
+    margin:30px;
+}
+.latest-tweets-wrapper{
+    width:100%;
+    color:#fff;
+    background:#4fc6f8;    
+    font-size:15px;
+    line-height:20px;
+}
+.latest-tweets-wrapper .item{
+    padding:26px;
+    border-top:1px solid #7bd4fa;
+}
+.latest-tweets-wrapper .item:first-of-type{
+    border-top:0;
+}
+.latest-tweets-wrapper .item .link{
+    color:#fff;
+    font-weight:bold;    
+}
+.latest-tweets-wrapper .item .time-counter{
+    margin:30px 0px 0px 0px;
+}
+.latest-tweets-wrapper .item.first{
+    border-width:0;
+    padding:26px 26px 0px 26px;
+}
+.latest-tweets-wrapper .item .icon-wrapper{
+    float:right;
+    width:20px;
+    height:20px;
+    line-height:20px;
+    text-align:center;
+    background:#fff;
+    color:#4fc6f8;
+    border-radius:50%;
+}

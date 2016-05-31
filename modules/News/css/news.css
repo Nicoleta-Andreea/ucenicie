@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 19, 2016, 2:55:59 PM
+    Author     : nicoleta.local
+*/
+
+.container{
+    width:300px;
+    height:535px;   
+    border:1px solid #000;
+    margin:30px;
+}
+.news-wrapper{
+    width:100%;
+    height:100%;
+    background:#fff;
+}
+.news-wrapper .news-header{
+    border-bottom:1px solid #dde2e4;
+    padding:0px 15px;
+    color:#475055;    
+    height:65px;
+    line-height:65px;
+}
+.news-wrapper .news-header .title{
+    float:left;
+    font-size:24px;
+    line-height:24px;
+}
+.news-wrapper .news-header .bullets-list{
+    float:right;
+    padding:24px 0px;
+}
+.news-wrapper .news-header .bullets-list .bullet-wrapper{
+    display:block;
+    float:left;
+    margin:0 5px;  
+}
+.news-wrapper .news-header .bullets-list .bullet-wrapper .bullet:hover,
+.news-wrapper .news-header .bullets-list .bullet-wrapper .bullet:focus,
+.news-wrapper .news-header .bullets-list .bullet-wrapper .bullet:active{
+    background:#a3abaf;
+}
+.news-wrapper .news-header .bullets-list .bullet-wrapper .bullet{
+    display:block;
+    height:12px;
+    width:12px;
+    background:#fff;
+    border:1px solid #a3abaf;
+    border-radius:50%;
+}
+.news-list .item{
+    padding:16px 15px 0px 15px;     
+}
+.news-list .item:last-of-type{
+    padding:14px 15px;;
+}
+.news-list .item .news-section{
+    color:#6c7377;
+    float:left;
+    width:178px;    
+    font-size:15px;
+}
+.news-list .item .news-section .news-text .link{
+    color:#475055;
+}
+/*.news-list .item .news-section .news-text{
+    display:block;
+    display:-webkit-box;
+    max-width:100%;
+    height:38px;
+    margin:0 auto;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight:500;
+    line-height:1.3;
+}*/
+
+/* styles for '...' */ 
+.news-list .item .news-section .news-text{ 
+    overflow: hidden;
+    position: relative;
+    line-height:1.2em;
+    max-height:2.4em;
+    margin:2px 0 0 0;
+    padding:0 1em 0 0;
+}
+/* create the ... */
+.news-list .item .news-section .news-text:before {
+   content: '...';
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.news-list .item .news-section .news-text:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin:0.2em 0 0 0;
+  background:#fff;
+}
+
+.news-list .item .news-section .time{
+    color:#a3abaf;
+    margin:15px 0 0 0;
+}
+.news-list .item .icon-wrapper{
+    display:inline-block;
+    width:70px;
+    height:70px;
+    background:#787878;
+    float:left;
+    margin:0px 20px 0px 0px;
+    text-align:center;
+    line-height:70px;
+}
+.news-list .item .icon-wrapper .icon{
+    line-height:70px;
+    width:70px;
+    height:70px;
+}
+.news-list .item .icon-wrapper.news-1{
+     background:#7fa9cc;
+}
+.news-list .item .icon-wrapper.news-2{
+     background:url("http://localhost/first_project/first_app/public_html/resources/images/corn.jpg");
+}
+.news-list .item .icon-wrapper.news-3{
+    background:#e97b7f;
+}
+.news-list .item .icon-wrapper.news-4{
+    background:url(../../../resources/images/ansamblu.jpg);
+}
+.news-list .item .icon-wrapper.news-5{
+    background:url(../../../resources/images/dance.jpg);
+}
+.news-list .item .icon-wrapper .icon.fa-smile-o{
+    color:#FFFFCC; 
+}
+.news-list .item .icon-wrapper .icon.fa-cab{
+    color:#fff;
+}
+

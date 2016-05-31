@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 13, 2016, 10:18:14 AM
+    Author     : nicoleta.local
+*/
+a{
+    color:#fff;
+}
+.container{
+    width:219px;
+    height:150px;
+    margin:30px;
+    float:left;
+}
+.counter-section{
+    float:left;
+}
+.follow{
+    float:right;
+}
+.social-widget{
+    color:#fff;
+    display:block;
+    padding:30px 15px 20px 20px;
+    font-size:15px;    
+    width:100%;
+    height:100%;
+}
+.social-icon{
+    padding:0px 0px 50px 0px;
+    width:100%;
+}
+.facebook-widget{
+    background:#4d6baa;
+}
+.twitter-widget{
+    background:#4fc6f8;
+}
+.facebook-widget .follow .fa-plus{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;  
+    font-size:11px;
+}

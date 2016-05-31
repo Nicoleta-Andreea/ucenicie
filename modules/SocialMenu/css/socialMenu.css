@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 13, 2016, 2:24:04 PM
+    Author     : nicoleta.local
+*/
+.container{
+    width:217px;
+    border:1px solid #000;
+    margin:30px;
+}
+.social-menu-list{
+    background:#fff;
+    padding:25px;
+    line-height:55px;
+    font-size:16px;
+    width:100%;
+    height:100%;
+}
+.social-menu-list .item{
+     width:100%;
+     color:#475055;
+     transition:color 1s ease-in;
+     display:inline-block;
+}
+.social-menu-list .item .icon{
+    width:40px;
+    height:40px;
+    display:inline-block;
+    background:#c5cdd1;
+    color:#fff;
+    line-height:40px;
+    text-align:center;
+    border-radius:50%;      
+    margin:0px 20px 0px 0px;
+    transition:all 0.2s ease-in-out;
+}
+.social-menu-list .item:focus,
+.social-menu-list .item:hover,
+.social-menu-list .item:active{
+    color:#4fc6f8;
+}
+.social-menu-list .item:hover .icon,
+.social-menu-list .item:focus .icon,
+.social-menu-list .item:active .icon{
+    background:#4fc6f8;
+    border-radius:0 42% 42% 0;
+    padding:0px 0px 0px 25px; 
+    margin:0px 20px 0px -25px;
+    width:65px;
+}
+.social-menu-list .item:hover .fa-facebook,
+.social-menu-list .item:focus .fa-facebook,
+.social-menu-list .item:active .fa-facebook{
+    background:#4D6BAA;
+}
+.social-menu-list .item:hover .fa-twitter,
+.social-menu-list .item:focus .fa-twitter,
+.social-menu-list .item:active .fa-twitter{
+    background:#4FC6F8;
+}
+.social-menu-list .item:hover .fa-google-plus,
+.social-menu-list .item:active .fa-google-plus,
+.soscial-menu-list .item:focus .fa-google-plus{
+    background:#EA6060;
+}
+.social-menu-list .item:hover .fa-pinterest,
+.social-menu-list .item:active .fa-pinterest,
+.social-menu-list .item:focus .fa-pinterest{
+    background:#CB2027;
+}
+.social-menu-list .item:hover .fa-rss,
+.social-menu-list .item:active .fa-rss,
+.social-menu-list .item:focus .fa-rss{
+    background:#E15901;
+}

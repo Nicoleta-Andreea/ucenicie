@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 16, 2016, 10:35:16 AM
+    Author     : nicoleta.local
+*/
+.container{
+    width:240px;
+    margin:30px;
+}
+.main-menu{
+   font-size:16px;
+   line-height:28px;
+   width:100%;
+   height:100%;
+}
+.main-menu .main-item{
+    background:#152840;     
+    padding:20px 30px 20px 30px;
+    border-width:1px 0 0 0;
+    border-style:solid;
+    border-color:#fff;
+}
+.main-menu .main-item .expandable{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #56ccc8;
+    font-weight: bold;
+    position: relative;   
+    cursor:pointer;  
+    float:right;
+}
+.main-menu .main-item .expandable .arrow{
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #152840;
+    border-bottom: 2px solid #152840;
+    background: transparent;
+    transform: rotate(-45deg);
+   -ms-transform:rotate(-45deg); 
+   -webkit-transform:rotate(-45deg);
+    transition:transform 0.5s ease-in-out;   
+    background: #56ccc8;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    left: 50%;
+    margin-left: -5px;
+}
+.main-menu .main-item .expandable .arrow.arrow-down{
+    transform:rotate(45deg);
+   -ms-transform:rotate(45deg); 
+   -webkit-transform:rotate(45deg);
+    margin-left:-4px;
+    margin-top:-5px;
+}
+.main-menu .main-item.first{
+    border-width:0;
+}
+.main-menu .main-item:hover,
+.main-menu .main-item:focus,
+.main-menu .main-item:active{
+    background:#263a54;
+    border-color:#445e78;
+}
+.main-menu .main-item .descr{
+    color:#52c1bf;
+    display:inline-block;
+    width: 100%;
+    cursor: pointer;
+    height:21px;
+}
+.submenu{
+    margin-top:9px;
+}
+.submenu .item .descr{
+    color:#fff;
+}
+
+ 
