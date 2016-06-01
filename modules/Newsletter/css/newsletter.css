@@ -44,6 +44,15 @@ and open the template in the editor.
     border:1px solid #dde2e4;
     width:287px;
 }
+.newsletter-wrapper .signup-section .email-address.error{
+    color:#f00;
+}
+.newsletter-wrapper .signup-section label.error{
+    position:absolute;
+    bottom:0px;
+    left:25px;
+    color:#f00;
+}
 .newsletter-wrapper .signup-section .submit-button{
     width:97px;
     height:38px;
@@ -59,7 +68,7 @@ and open the template in the editor.
 }
 .newsletter-wrapper .subscribe-message{
     position:absolute;
-    top:10px;
+    bottom:5px;
     font-style:italic;
     color:#f00;
 }

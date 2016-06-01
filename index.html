@@ -37,12 +37,16 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="resources/css/finalGridPlaceholders.css">
         <link rel="stylesheet" type="text/css" href="resources/css/responsive.css">
         
-        <script src="resources/js/jquery/jquery-1.12.4.js"></script>
+        <script src="resources/js/jquery/jquery-1.12.4.js"></script>        
+        <script src="resources/js/jquery/jquery.validate.min.js"></script>
+        
+        <!--<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script> -->
+        
         <script src="modules/MenuHorizontal/js/menuHorizontal.js"></script>
+        <script src="modules/Newsletter/js/newsletter.js"></script>
         <script src="resources/js/jquery.cookie.js"></script>
         <script src="modules/cookieDisclaimer/js/cookieDisclaimer.js"> </script>
         <script src="resources/js/accordion/accordion.js"> </script>
-        <script src="resources/js/nl_subscription/nl_subscription.js"> </script>
         <script src="resources/js/config.js"> </script>
         <script src="resources/js/scripts.js"> </script>
     </head>
@@ -366,7 +370,7 @@ and open the template in the editor.
                                                 <p class="title-wrapper">Join The Newsletter</p>
                                                 <p class="signup-message">Sign up for our personalized daily newsletter</p>
 
-                                                <form class="signup-section" onsubmit="return false;">
+                                                <form class="signup-section" id="signupForm" onsubmit="return false;">
                                                      <input class="email-address" type="email" placeholder="Enter email address" required /> 
                                                      <input class="submit-button" type="submit" value="sign up" />
                                                      <div class="subscribe-message"></div>

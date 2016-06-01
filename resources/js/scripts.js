@@ -6,11 +6,14 @@
 
 $(document).ready(function(){
     var initCookieDisclaimer  =  new initCookieDisclaimerClass();    
-    var initAccordion         =  new initAccordionClass();
-    //var initNlSubscription    =  new initNlSubscriptionClass();
+    var initAccordion         =  new initAccordionClass();    
+    var initNlSubscription    =  new initNlSubscriptionClass(); 
     
     var initConfig            =  new initConfigClass();
+
+    var url   = initConfig.setActionUrl("nl_config");
+    initNlSubscription.setUrl(url);
     
-    
+    initNlSubscription.attachHandlers();
     
 });

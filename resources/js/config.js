@@ -6,11 +6,10 @@
 
 var initConfigClass = function(){
     var nlContainer              =  $(".nl-subscribe"),
-        nlOptions                =  nlContainer.find(".nl-config"),          
-        nlSubscriptionContainer  =  $('.newsletter-wrapper'),
-        submit_button            =  nlSubscriptionContainer.find(".submit-button"),  
-        messageContainer         =  nlSubscriptionContainer.find(".subscribe-message"),
-        configObj                =  {nl_config:''};
+        nlOptions                =  nlContainer.find(".nl-config"),        
+        configObj                =  {nl_config:''},
+        extern = {};
+ 
     
     var getSelectedValue = function(options){
         selectedValue = options.val();
@@ -19,16 +18,13 @@ var initConfigClass = function(){
         return selectedValue;
     };       
     
-    var changeNlOption = function(){
+    changeNlOption = function(){
         saveConfig();
-        setActionUrl("nl_config");
+        extern.setActionUrl("nl_config");
     };
      
-    var nlSubscriptionMessage = function(data){
-        messageContainer.html(data);
-    };
-    
-    var setActionUrl  = function(key){
+     
+    extern.setActionUrl  = function(key){
         var config = JSON.parse(localStorage.getItem("config"));
         
         console.log("config="+config);
@@ -53,22 +49,6 @@ var initConfigClass = function(){
         container.val(keyValue);
     }; 
     
-    
-    var nlSubscription = function(){
-        email_address = $(".email-address").val();
-                    
-        data = {email_address:email_address};
-        url = setActionUrl("nl_config");
-        
-        $.ajax({
-          url: url,
-          success:(function(data) {
-            console.log(data);
-            nlSubscriptionMessage(data.message);
-           })
-        });             
-    };   
-    
    
     var saveConfig = function(){        
         nlSelectedValue = getSelectedValue(nlOptions);
@@ -84,12 +64,12 @@ var initConfigClass = function(){
     
    var attachHandlers = function(){      
        nlOptions.change(changeNlOption);        
-       submit_button.click(nlSubscription);
+       
     };
     
     var _init = function(){
         saveConfig();        
-        setActionUrl("nl_config");
+        extern.setActionUrl("nl_config");
         setSelectedValue(nlOptions,"nl_config");
         
         attachHandlers();
@@ -97,4 +77,6 @@ var initConfigClass = function(){
     };
     
     _init();
+    
+    return extern;
 };
