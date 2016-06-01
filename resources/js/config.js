@@ -8,43 +8,30 @@ var initConfigClass = function(){
     var nlContainer              =  $(".nl-subscribe"),
         nlOptions                =  nlContainer.find(".nl-config"),        
         configObj                =  {nl_config:''},
-        extern = {};
+        extern                   =  {};
  
     
     var getSelectedValue = function(options){
         selectedValue = options.val();
-        console.log("selectedValue="+selectedValue);
-        
         return selectedValue;
     };       
     
     changeNlOption = function(){
         saveConfig();
         extern.setActionUrl("nl_config");
-    };
-     
+        initNlSubscription.setNLUrl(extern.setActionUrl("nl_config"));
+    };     
      
     extern.setActionUrl  = function(key){
-        var config = JSON.parse(localStorage.getItem("config"));
-        
-        console.log("config="+config);
-        console.log("key="+key);
-        
-        var keyValue = config[key];
-        console.log("keyvalue="+keyValue);
-        
-        var url = "http://localhost/first_project/first_app/public_html/resources/js/nl_subscription/files/"+keyValue+".json";
-       
-        console.log("url="+url);        
+        var config  = JSON.parse(localStorage.getItem("config")),      
+                      keyValue = config[key],
+                      url = "http://localhost/first_project/first_app/public_html/resources/js/nl_subscription/files/"+keyValue+".json";
         return url;
     };
     
     var setSelectedValue = function(container,key){
-        console.log("container="+container);
-        console.log("key="+key);
-        
-        var config = JSON.parse(localStorage.getItem("config"));
-        var keyValue = config[key];
+        var config = JSON.parse(localStorage.getItem("config")),                
+                     keyValue = config[key];
         
         container.val(keyValue);
     }; 
@@ -52,8 +39,7 @@ var initConfigClass = function(){
    
     var saveConfig = function(){        
         nlSelectedValue = getSelectedValue(nlOptions);
-        configObj.nl_config = nlSelectedValue;
-        
+        configObj.nl_config = nlSelectedValue;       
      
         if(typeof(Storage) !== "undefined"){
             localStorage.setItem("config",JSON.stringify(configObj));
@@ -63,8 +49,7 @@ var initConfigClass = function(){
     };
     
    var attachHandlers = function(){      
-       nlOptions.change(changeNlOption);        
-       
+       nlOptions.change(changeNlOption);          
     };
     
     var _init = function(){

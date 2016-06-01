@@ -4,14 +4,18 @@
  * and open the template in the editor.
  */
 
-var initNlSubscriptionClass = function(){
+var initNlSubscriptionClass = function(config){
     var extern = {},
         nlSubscriptionContainer  =  $('.newsletter-wrapper'),    
         messageContainer         =  nlSubscriptionContainer.find(".subscribe-message"),
         submit_button            =  nlSubscriptionContainer.find(".submit-button"),  
         messageContainer         =  nlSubscriptionContainer.find(".subscribe-message"),
-        url                      =  "";
+        url                      =  (typeof config !== 'undefined' && typeof config.url !== 'undefined') ? config.url : '',
         nlForm                   =  nlSubscriptionContainer.find("#signupForm");
+    
+    extern.setNLUrl = function(newUrl) {
+        url = newUrl;
+    };
     
     var nlSubscriptionMessage = function(data){
         messageContainer.html(data);
@@ -24,25 +28,29 @@ var initNlSubscriptionClass = function(){
     
     extern.nlSubscription = function(){
         $.ajax({
-              url: extern.setUrl,
-              success:(function(data) {
+              url: url,
+              success:function(data) {
                 console.log(data);
                 nlSubscriptionMessage(data.message);
-               })
+               },
+               error: function(xhr) {
+                   console.log(xhr);
+               }
         });          
     };
     
-    extern.attachHandlers = function(){      
+    var attachHandlers = function(){      
         submit_button.click(extern.nlSubscription);
     };
     
-    /*var _init = function(){
+    var _init = function(){
        attachHandlers();   
-    };*/
+    };
+    
+    _init();
 
     
     return extern;
-    //return extern;     
     
 };
 
