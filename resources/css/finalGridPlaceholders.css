@@ -18,18 +18,25 @@ body{
     width:930px;
     text-align:left;
 }
-.wrapper .nl-subscribe{
+.wrapper .options-lists{
     color:#475055;
     background:#fff;
     margin:0 0 20px 0;
-    padding:15px 30px 15px 30px;   
+    padding:15px 30px 15px 30px; 
 }
-.wrapper .nl-subscribe select[name="nl_subscription"]{
+.wrapper .nl-subscribe,
+.wrapper .ask-questions{
+    width:50%;
+    float:left;
+}
+.wrapper .nl-subscribe select[name="nl_subscription"],
+.wrapper .ask-questions select[name="ask_questions"]{
     float:left;
     height:32px;
     font-size:15px;
 }
-.wrapper .nl-subscribe .title{       
+.wrapper .nl-subscribe .title,
+.wrapper .ask-questions .title{       
     margin:0 30px 0px 0;
     float:left;
     line-height:30px;

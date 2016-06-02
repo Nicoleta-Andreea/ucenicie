@@ -5,15 +5,17 @@
  */
 
 $(document).ready(function(){
-    var initCookieDisclaimer  =  new initCookieDisclaimerClass();    
-    var initAccordion         =  new initAccordionClass();    
-    
-    var initConfig            =  new initConfigClass();
-    var url   = initConfig.setActionUrl("nl_config");    
-    var nlConfigObject = {"url": url};
-    
-    initNlSubscription    =  new initNlSubscriptionClass(nlConfigObject); 
+    var initCookieDisclaimer  =  new initCookieDisclaimerClass(),    
+        initAccordion         =  new initAccordionClass(),    
+        initConfig            =  new initConfigClass(),       
+        url                   =  initConfig.setActionUrl("nl_subscription"),    
+        nlConfigObject        =  {"url": url},    
+        initNlSubscription    =  new initNlSubscriptionClass(nlConfigObject); 
    
+        /*url = initConfig.setActionUrl(),
+        
+        askQuestionsConfigObject  = {"url":url},
+        initAskQuestion       =  new questionsClass();*/
     
     
 });

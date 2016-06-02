@@ -44,6 +44,7 @@ and open the template in the editor.
         
         <script src="modules/MenuHorizontal/js/menuHorizontal.js"></script>
         <script src="modules/Newsletter/js/newsletter.js"></script>
+        <script src="modules/QuestionsForm/js/questions.js"></script>
         <script src="resources/js/jquery.cookie.js"></script>
         <script src="modules/cookieDisclaimer/js/cookieDisclaimer.js"> </script>
         <script src="resources/js/accordion/accordion.js"> </script>
@@ -64,16 +65,29 @@ and open the template in the editor.
                     </div>    
                <!--end cookie disclaimer -->
                
-               <!-- SELECT BOX FOR NL SUBSCRIBE MESSAGES-->
-                    <div class="row clearfix nl-subscribe">
-                        <span class="title">Newsletter subscribe</span> 
-                        <select name="nl_subscription" class="nl-config">
-                               <option value="nl_success" class="nl-option" selected>Success</option>
-                               <option value="nl_failed" class="nl-option">Failed</option>
-                               <option value="user_already_subscribed" class="nl-option">User already subscribed</option>
-                         </select>    
-                    </div> 
-               <!-- END SELECT BOX FOR NL SUBSCRIBE MESSAGES -->
+               <div class="row clearfix options-lists">
+                        <!-- SELECT BOX FOR NL SUBSCRIBE MESSAGES-->
+                             <div class="column nl-subscribe">
+                                 <span class="title">Newsletter subscribe</span> 
+                                 <select name="nl_subscription" class="config">
+                                        <option value="nl_success" class="option" selected>Success</option>
+                                        <option value="nl_failed" class="option">Failed</option>
+                                        <option value="user_already_subscribed" class="option">User already subscribed</option>
+                                  </select>    
+                             </div> 
+                        <!-- END SELECT BOX FOR NL SUBSCRIBE MESSAGES -->
+
+                        <!-- SELECT BOX FOR ASK QUESTIONS FORM -->
+                             <div class="column ask-questions">
+                                 <span class="title">Ask a question</span> 
+                                 <select name="ask_questions" class="config">
+                                        <option value="success" class="option" selected>Success</option>
+                                        <option value="failed" class="option">Failed</option>
+                                        <option value="question_required" class="option">Question required</option>
+                                  </select>    
+                             </div> 
+                        <!-- END SELECT BOX FOR ASK QUESTIONS FORM -->
+               </div>
                
                <div class="row top clearfix">                   
                    <!-- HORIZONTAL MENU -->

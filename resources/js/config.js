@@ -5,41 +5,91 @@
  */
 
 var initConfigClass = function(){
-    var nlContainer              =  $(".nl-subscribe"),
-        nlOptions                =  nlContainer.find(".nl-config"),        
-        configObj                =  {nl_config:''},
-        extern                   =  {};
- 
+    var listsContainer           =  $(".options-lists"),
+        extern                   =  {},
+        optionsList              =  [];
+
+        configObj                =  {nl_subscription:"",ask_questions:""};
+        
+    var setOptionsLists = function(){
+        options = listsContainer.find(".config");
+        $.each(options,function(){
+           list = $(this); 
+           optionsList.push(list);
+        });
+    };
     
+    var initLocalStorage = function(){       
+        if(typeof(Storage) !== "undefined"){
+            localStorage.setItem("config",JSON.stringify(configObj));
+        }else{
+            return "No web storage support";
+        }
+    };     
+
+    
+    var getListName = function(list){
+        return list.attr("name");
+    };   
+      
     var getSelectedValue = function(options){
         selectedValue = options.val();
         return selectedValue;
     };       
     
-    changeNlOption = function(){
-        saveConfig();
-        extern.setActionUrl("nl_config");
-        initNlSubscription.setNLUrl(extern.setActionUrl("nl_config"));
+    changeOption = function(){
+        saveConfig($(this)); 
+        config_type = getListName($(this));
+        extern.setActionUrl(config_type);
     };     
      
-    extern.setActionUrl  = function(key){
+    extern.setActionUrl  = function(key){ 
+        console.log("key="+key);
         var config  = JSON.parse(localStorage.getItem("config")),      
-                      keyValue = config[key],
-                      url = "http://localhost/first_project/first_app/public_html/resources/js/nl_subscription/files/"+keyValue+".json";
+                      keyValue = config[key],                                    
+                      url = "http://localhost/first_project/first_app/public_html/resources/js/"+key+"/files/"+keyValue+".json";   
+              
+        console.log("url="+url);
+        
         return url;
     };
     
-    var setSelectedValue = function(container,key){
+    var setSelectedValue = function(container,key){      
+        var list_name = getListName(container);
         var config = JSON.parse(localStorage.getItem("config")),                
-                     keyValue = config[key];
-        
-        container.val(keyValue);
-    }; 
+                     keyValue = config[key];       
     
+        container.val(keyValue);       
+    };     
+    
+    var iterateOptions = function(){       
+        setOptionsLists(); 
+        
+        $.each(optionsList,function(){
+      
+           list = $(this);
+           list_name = getListName(list);     
+           
+           selectedValue = getSelectedValue(list);
+           
+           configObj[list_name] = selectedValue; 
+           
+          // saveConfig(list);
+          
+          
+           extern.setActionUrl(list_name);
+           setSelectedValue(list,list_name);
+     
+        });
+        
+ 
+    };
    
-    var saveConfig = function(){        
-        nlSelectedValue = getSelectedValue(nlOptions);
-        configObj.nl_config = nlSelectedValue;       
+    saveConfig = function(list){       
+        selectedValue = getSelectedValue(list);
+        list_name = getListName(list);
+              
+        configObj[list_name] = selectedValue;       
      
         if(typeof(Storage) !== "undefined"){
             localStorage.setItem("config",JSON.stringify(configObj));
@@ -49,16 +99,17 @@ var initConfigClass = function(){
     };
     
    var attachHandlers = function(){      
-       nlOptions.change(changeNlOption);          
+       $.each(optionsList,function(){
+           $(this).change(changeOption); 
+       });
+                
     };
     
+    iterateOptions(); 
+    
     var _init = function(){
-        saveConfig();        
-        extern.setActionUrl("nl_config");
-        setSelectedValue(nlOptions,"nl_config");
-        
-        attachHandlers();
-        
+      
+       attachHandlers();
     };
     
     _init();

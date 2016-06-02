@@ -27,16 +27,19 @@ var initNlSubscriptionClass = function(config){
     };
     
     extern.nlSubscription = function(){
-        $.ajax({
-              url: url,
-              success:function(data) {
-                console.log(data);
-                nlSubscriptionMessage(data.message);
-               },
-               error: function(xhr) {
-                   console.log(xhr);
-               }
-        });          
+              
+        nlForm.validate();       
+        if((nlForm).valid()){
+            $.ajax({
+                  url: url,
+                  success:function(data) {
+                      nlSubscriptionMessage(data.message);
+                   },
+                   error: function(xhr) {
+                       console.log(xhr);
+                   }
+            });  
+        }
     };
     
     var attachHandlers = function(){      
