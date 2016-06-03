@@ -18,16 +18,18 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container">
-            <div class="questions-wrapper">
-                <p class="title-wrapper">Ask a Question</p>
-                               
-                <form action="#" method="post" class="questions-section">
-                     <input class="name field" type="text" placeholder="Your name" maxlength="100" required />
-                     <input class="email-address field" type="email" placeholder="Enter email address" required /> 
-                     <textarea class="question" placeholder="Your question"  required ></textarea>
-                     <input class="submit-button" type="submit" value="submit" />
-                </form>                    
-            </div>
+            <!-- QUESTIONS FORM -->
+                <div class="questions-wrapper">
+                    <p class="title-wrapper">Ask a Question</p>
+                    <form method="post" id="askForm" class="questions-section" onsubmit="return false;">
+                         <input class="name field" type="text" placeholder="Your name" maxlength="100" required />
+                         <input class="email-address field" type="email" placeholder="Enter email address" required /> 
+                         <textarea class="question" placeholder="Your question"  required ></textarea>
+                         <input class="submit-button" type="submit" value="submit" />
+                    </form>
+                    <div class="subscribe-message"></div>
+                </div>
+            <!-- END QUESTIONS FORM -->
         </div>
     </body>
 </html>

@@ -26,14 +26,13 @@ var initNlSubscriptionClass = function(config){
         return url;
     };
     
-    extern.nlSubscription = function(){
-              
+    extern.nlSubscription = function(){              
         nlForm.validate();       
         if((nlForm).valid()){
             $.ajax({
                   url: url,
                   success:function(data) {
-                      nlSubscriptionMessage(data.message);
+                     nlSubscriptionMessage(data.message);
                    },
                    error: function(xhr) {
                        console.log(xhr);

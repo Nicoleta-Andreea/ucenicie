@@ -8,8 +8,7 @@ var initConfigClass = function(){
     var listsContainer           =  $(".options-lists"),
         extern                   =  {},
         optionsList              =  [];
-
-        configObj                =  {nl_subscription:"",ask_questions:""};
+        configObj                =  {};
         
     var setOptionsLists = function(){
         options = listsContainer.find(".config");
@@ -19,14 +18,18 @@ var initConfigClass = function(){
         });
     };
     
-    var initLocalStorage = function(){       
-        if(typeof(Storage) !== "undefined"){
-            localStorage.setItem("config",JSON.stringify(configObj));
-        }else{
-            return "No web storage support";
-        }
-    };     
 
+    var updateLocalStorage = function(field_name,new_value){
+         var config = JSON.parse(localStorage.getItem("config"));       
+           
+         $.each(config,function(key){
+            configObj[key] = config[key];
+         });
+         
+         configObj[field_name]=new_value;            
+         
+         saveConfig();
+    };
     
     var getListName = function(list){
         return list.attr("name");
@@ -38,59 +41,52 @@ var initConfigClass = function(){
     };       
     
     changeOption = function(){
-        saveConfig($(this)); 
-        config_type = getListName($(this));
-        extern.setActionUrl(config_type);
+        list = $(this);        
+        configType = getListName(list);        
+        selectedValue = getSelectedValue(list);        
+        updateLocalStorage(configType,selectedValue);      
+        extern.setActionUrl(configType);
+        setSelectedValue(list,configType); 
+        
+        url =  extern.setActionUrl(configType);
+        ConfigObject        =  {"url": url};    
+                
+        if(configType === "nl_subscription"){        
+             initNlSubscription    =  new initNlSubscriptionClass(ConfigObject);
+        }else{
+            initAskQuestions  = new initAskQuestionsClass(ConfigObject);
+        }    
+        
     };     
      
     extern.setActionUrl  = function(key){ 
-        console.log("key="+key);
-        var config  = JSON.parse(localStorage.getItem("config")),      
+        var config  = getConfig(),      
                       keyValue = config[key],                                    
                       url = "http://localhost/first_project/first_app/public_html/resources/js/"+key+"/files/"+keyValue+".json";   
-              
-        console.log("url="+url);
-        
+           
         return url;
     };
     
     var setSelectedValue = function(container,key){      
         var list_name = getListName(container);
-        var config = JSON.parse(localStorage.getItem("config")),                
-                     keyValue = config[key];       
-    
+        var config = getConfig(),                
+                     keyValue = config[key];    
         container.val(keyValue);       
     };     
     
-    var iterateOptions = function(){       
-        setOptionsLists(); 
-        
+    var initConfig = function(){        
+        setOptionsLists();   
         $.each(optionsList,function(){
-      
-           list = $(this);
-           list_name = getListName(list);     
-           
-           selectedValue = getSelectedValue(list);
-           
-           configObj[list_name] = selectedValue; 
-           
-          // saveConfig(list);
-          
-          
-           extern.setActionUrl(list_name);
-           setSelectedValue(list,list_name);
-     
-        });
-        
- 
+            list           =  $(this);
+            listName       =  getListName(list);
+            selectedValue  =  getSelectedValue(list);            
+            configObj[listName] = selectedValue;
+        });        
+        saveConfig();
+        config = JSON.parse(localStorage.getItem("config"));             
     };
-   
-    saveConfig = function(list){       
-        selectedValue = getSelectedValue(list);
-        list_name = getListName(list);
-              
-        configObj[list_name] = selectedValue;       
-     
+    
+    saveConfig = function(){       
         if(typeof(Storage) !== "undefined"){
             localStorage.setItem("config",JSON.stringify(configObj));
         }else{
@@ -98,17 +94,39 @@ var initConfigClass = function(){
         }
     };
     
-   var attachHandlers = function(){      
+    var getConfig  =  function(){
+         config = JSON.parse(localStorage.getItem("config"));
+         return config;
+    };   
+    
+    var iterateOptions = function(){
+      if (getConfig()===null){
+          initConfig();
+      }else{  
+         setOptionsLists();            
+         $.each(optionsList,function(){
+              list = $(this);
+              configType = getListName(list);        
+              selectedValue = config[configType];        
+            
+              extern.setActionUrl(configType);            
+              setSelectedValue(list,configType);       
+          
+       });  
+      } 
+    };    
+ 
+    var attachHandlers = function(){      
        $.each(optionsList,function(){
-           $(this).change(changeOption); 
-       });
-                
+           $(this).change(changeOption);      
+          
+       });                
     };
     
-    iterateOptions(); 
-    
-    var _init = function(){
-      
+   
+    var _init = function(){     
+       iterateOptions();
+       
        attachHandlers();
     };
     

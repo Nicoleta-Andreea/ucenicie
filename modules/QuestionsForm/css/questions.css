@@ -20,6 +20,7 @@ and open the template in the editor.
     background:#fff;
     color:#475055;
     padding:20px;
+    position:relative;
 }
 .questions-wrapper .title-wrapper{
     font-size:24px;
@@ -37,6 +38,16 @@ and open the template in the editor.
     border:1px solid #dde2e4;
     color:#60676c;
     font-weight:300;
+}
+.questions-wrapper .subscribe-message {
+    position: absolute;
+    bottom:75px;
+    font-style: italic;
+    color: #f00;
+}
+.questions-wrapper .questions-section .field.error,
+.questions-wrapper .questions-section .question.error{
+    color: #f00;
 }
 .questions-wrapper .questions-section .field:focus,
 .questions-wrapper .questions-section .question:focus{

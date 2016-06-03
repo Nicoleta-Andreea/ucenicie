@@ -8,14 +8,14 @@ $(document).ready(function(){
     var initCookieDisclaimer  =  new initCookieDisclaimerClass(),    
         initAccordion         =  new initAccordionClass(),    
         initConfig            =  new initConfigClass(),       
+       
         url                   =  initConfig.setActionUrl("nl_subscription"),    
-        nlConfigObject        =  {"url": url},    
-        initNlSubscription    =  new initNlSubscriptionClass(nlConfigObject); 
+        ConfigObject          =  {"url": url},    
+        initNlSubscription    =  new initNlSubscriptionClass(ConfigObject), 
    
-        /*url = initConfig.setActionUrl(),
-        
-        askQuestionsConfigObject  = {"url":url},
-        initAskQuestion       =  new questionsClass();*/
-    
+       
+        url                   =  initConfig.setActionUrl("ask_questions"),            
+        ConfigObject          =  {"url": url}, 
+        initAskQuestions      =  new initAskQuestionsClass(ConfigObject);      
     
 });
