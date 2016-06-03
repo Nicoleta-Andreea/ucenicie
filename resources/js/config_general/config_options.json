@@ -1,48 +1,51 @@
 {
 	"callConfiguration": [
 		{
-			"fieldName": "newsletter",
-			"fieldClass": "nl-config",
+                        "container":"nl-subscribe",
+			"fieldName": "nl_subscription",
+			"fieldClass":"config",
 			"options": [
 				{
 					"value": "nl_success",
 					"label": "Success",
-					"class": "nl-option"
+					"class": "option"
 				},
 				{
 					"value": "nl_failed",
 					"label": "Failed",
-					"class": "nl-option"
+					"class": "option"
 				},
 				{
 					"value": "user_already_subscribed",
 					"label": "User already subscribed",
-					"class": "nl-option"
+					"class": "option"
 				}
 			]
 		},
 		{
-			"fieldName": "ask_question",
-			"fieldClass": "nl-config",
+			"container":"ask-questions",
+                        "fieldName": "ask_questions",
+			"fieldClass": "config",
 			"options": [
 				{
-					"value": "nl_success",
+					"value": "success",
 					"label": "Success",
-					"class": "nl-option"
+					"class": "option"
 				},
 				{
-					"value": "nl_failed",
+					"value": "failed",
 					"label": "Failed",
-					"class": "nl-option"
+					"class": "option"
 				},
 				{
-					"value": "user_already_subscribed",
-					"label": "User already subscribed",
-					"class": "nl-option"
+					"value": "question_required",
+					"label": "Question required",
+					"class": "option"
 				}
 			]
 		}
 	],
+        
 	"menuConfiguration": [
 		{
 			"label": "Home",

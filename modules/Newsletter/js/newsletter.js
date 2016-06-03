@@ -26,7 +26,7 @@ var initNlSubscriptionClass = function(config){
         return url;
     };
     
-    extern.nlSubscription = function(){              
+    extern.nlSubscription = function(){        
         nlForm.validate();       
         if((nlForm).valid()){
             $.ajax({

@@ -3,17 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(document).ready(function(){
-    var configGeneral     =  new configGeneralScriptClass(),
-        initCookieDisclaimer  =  new initCookieDisclaimerClass(),    
-        initAccordion         =  new initAccordionClass();  
-});
-
-
-$(window).load(function(){
-     /*callPopulateLists();
-    
-     function callPopulateLists(){
+ var configGeneralScriptClass = function(){   
+     var callPopulateLists = function(){
         url = "http://localhost/first_project/first_app/public_html/resources/js/config_general/config_options.json";        
         
         $.ajax({
@@ -26,9 +17,9 @@ $(window).load(function(){
                        console.log(xhr);
                    }
         });        
-    }
+    };
     
-    function populateLists(data){
+    var populateLists = function (data){
        $.each(data,function(index,element){
            if(index === "callConfiguration"){
                generateSelectOptions(element);
@@ -38,17 +29,18 @@ $(window).load(function(){
        });
     };
     
-    function generateSelectOptions(element){
+    var generateSelectOptions = function(element){
          $.each(element,function(index){                       
              list          = element[index];         
-             listContainer = list.container;
+             listContainer = $("."+list.container);
+             
              listHtml      = constructListHtml(list);     
             
              appendList(listHtml,listContainer); 
          });
-    }
+    };
     
-    function constructListHtml(list){        
+    var constructListHtml = function(list){        
         listHtml = "<select name='{list_name}' class='{list_class}'>{options}</select>";
         
         list_name    = list.fieldName;
@@ -57,40 +49,38 @@ $(window).load(function(){
         
         listHtml = listHtml.replace("{list_name}",list_name).replace("{list_class}",list_class);
         
-        options = "";     
+        options = "";  
         
-        $.each(list_options,function(index){                      
-            optionHtml = "<option class='{class}' value='{value}'>{label}</option>";
-            optionHtml = optionHtml.replace("{class}",list_options[index].class).replace("{value}",list_options[index].value).replace("{label}",list_options[index].label);
+        optionHtml = "<option class='{class}' value='{value}' selected>{label}</option>";        
+        optionHtml = optionHtml.replace("{class}",list_options[0].class).replace("{value}",list_options[0].value).replace("{label}",list_options[0].label);
+        options+=optionHtml;
+        
+        $.each(list_options,function(index){
+            if(index !== 0){
+                optionHtml = "<option class='{class}' value='{value}'>{label}</option>";
+                optionHtml = optionHtml.replace("{class}",list_options[index].class).replace("{value}",list_options[index].value).replace("{label}",list_options[index].label);
+                options+=optionHtml;
+            }          
             
-            options+=optionHtml;
         });
         
        listHtml = listHtml.replace("{options}",options);       
       
        return listHtml; 
        
-    }
-    
-    function appendList(listHtml,listContainer){      
-       $("."+listContainer).append(listHtml);
     };
     
-    function generateMenuOptions(element){
+    var appendList = function(listHtml,listContainer){      
+       listContainer.append(listHtml);
+    };
+    
+    var generateMenuOptions =function(element){
         return;
-    }*/
+    };  
     
-   
-    var initConfig            =  new initConfigClass(),          
-       
-        url                   =  initConfig.setActionUrl("nl_subscription"),    
-        ConfigObject          =  {"url": url},    
-        initNlSubscription    =  new initNlSubscriptionClass(ConfigObject), 
-   
-       
-        url                   =  initConfig.setActionUrl("ask_questions"),            
-        ConfigObject          =  {"url": url}, 
-        initAskQuestions      =  new initAskQuestionsClass(ConfigObject);       
-           
+    var _init = function(){        
+       callPopulateLists();
+    };
     
-});
+    _init();
+ };

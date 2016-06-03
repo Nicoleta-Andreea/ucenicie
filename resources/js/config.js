@@ -4,19 +4,24 @@
  * and open the template in the editor.
  */
 
-var initConfigClass = function(){
+var initConfigClass = function(){   
     var listsContainer           =  $(".options-lists"),
+        options                  =  listsContainer.find(".config"),    
         extern                   =  {},
         optionsList              =  [];
         configObj                =  {};
         
-    var setOptionsLists = function(){
-        options = listsContainer.find(".config");
-        $.each(options,function(){
+    var setOptionsLists = function(){       
+        $.each(options,function(){            
            list = $(this); 
+           console.log(list);
+           
            optionsList.push(list);
         });
-    };
+           
+       
+       
+     };
     
 
     var updateLocalStorage = function(field_name,new_value){
@@ -49,17 +54,16 @@ var initConfigClass = function(){
         setSelectedValue(list,configType); 
         
         url =  extern.setActionUrl(configType);
-        ConfigObject        =  {"url": url};    
+        ConfigObject = {"url":url}; 
                 
         if(configType === "nl_subscription"){        
              initNlSubscription    =  new initNlSubscriptionClass(ConfigObject);
         }else{
             initAskQuestions  = new initAskQuestionsClass(ConfigObject);
-        }    
-        
+        }        
     };     
      
-    extern.setActionUrl  = function(key){ 
+    extern.setActionUrl = function(key){ 
         var config  = getConfig(),      
                       keyValue = config[key],                                    
                       url = "http://localhost/first_project/first_app/public_html/resources/js/"+key+"/files/"+keyValue+".json";   
@@ -68,9 +72,9 @@ var initConfigClass = function(){
     };
     
     var setSelectedValue = function(container,key){      
-        var list_name = getListName(container);
-        var config = getConfig(),                
-                     keyValue = config[key];    
+        var list_name = getListName(container),
+            config = getConfig(),                
+            keyValue = config[key];    
         container.val(keyValue);       
     };     
     
@@ -118,15 +122,13 @@ var initConfigClass = function(){
  
     var attachHandlers = function(){      
        $.each(optionsList,function(){
-           $(this).change(changeOption);      
-          
+           $(this).change(changeOption);          
        });                
     };
     
-   
-    var _init = function(){     
-       iterateOptions();
-       
+    
+    var _init = function(){        
+       iterateOptions();       
        attachHandlers();
     };
     
