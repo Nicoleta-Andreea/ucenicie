@@ -5,20 +5,14 @@
  */
 
 var initConfigClass = function(){   
-    var listsContainer           =  $(".options-lists"),
-        options                  =  listsContainer.find(".config"),    
-        extern                   =  {},
-        optionsList              =  [],
+    var extern                   =  {},
         configObj                =  {};
+    
+     extern.setData = function(){
+         listsContainer           =  $(".options-lists");
+         options                  =  listsContainer.find(".config");
+     };
         
-        extern.setOptionsLists = function(){
-            $.each(options,function(){            
-                list = $(this); 
-                optionsList.push(list);
-            });  
-        
-    };    
-
     var updateLocalStorage = function(field_name,new_value){
          var config = JSON.parse(localStorage.getItem("config"));       
            
@@ -26,8 +20,7 @@ var initConfigClass = function(){
             configObj[key] = config[key];
          });
          
-         configObj[field_name]=new_value;            
-         
+         configObj[field_name]=new_value;             
          saveConfig();
     };
     
@@ -48,14 +41,16 @@ var initConfigClass = function(){
         extern.setActionUrl(configType);
         setSelectedValue(list,configType); 
         
-        url =  extern.setActionUrl(configType);
+        url = extern.setActionUrl(configType);
         ConfigObject = {"url":url}; 
                 
         if(configType === "nl_subscription"){        
              initNlSubscription    =  new initNlSubscriptionClass(ConfigObject);
         }else{
             initAskQuestions  = new initAskQuestionsClass(ConfigObject);
-        }        
+        }    
+        
+        //$("body").trigger()
     };     
      
     extern.setActionUrl = function(key){ 
@@ -76,9 +71,9 @@ var initConfigClass = function(){
     };     
     
     var initConfig = function(){        
-        extern.setOptionsLists();   
+        //setOptionsLists();   
        
-        $.each(optionsList,function(){
+        $.each(options,function(){
             list           =  $(this);
             listName       =  getListName(list);
             selectedValue  =  getSelectedValue(list);   
@@ -107,30 +102,31 @@ var initConfigClass = function(){
       if (getConfig()===null || $.isEmptyObject(config)){
           initConfig();
       }else{  
-         extern.setOptionsLists();  
+         //setOptionsLists();  
          
-         $.each(optionsList,function(){
+         $.each(options,function(){
               list = $(this);
               configType = getListName(list);        
               selectedValue = config[configType];        
             
               extern.setActionUrl(configType);            
-              setSelectedValue(list,configType);       
-          
+              setSelectedValue(list,configType);          
        });  
       } 
     };    
  
     extern.attachHandlers = function(){      
-       $.each(optionsList,function(){
+       $.each(options,function(){
            $(this).change(changeOption);          
        });                
     };
     
     
     var _init = function(){        
+       extern.setData();
        extern.iterateOptions();       
        extern.attachHandlers();
+       
     };
     
     _init();

@@ -10,19 +10,23 @@
         $.ajax({
                   url: url,
                   success:function(data) {                        
-                      populateLists(data);
                       populateLists(data);                            
-                      initConfig    =  new initConfigClass();
+                      initConfig.setData();               
+                      initConfig.iterateOptions();
+                      initConfig.attachHandlers();
                       
-                  },
-                  error: function(xhr) {
+                      //$(body).triger()
+                      
+                                        
+                   },
+                   error: function(xhr) {
                        console.log(xhr);
-                  }
-        });        
+                   }
+            });        
     };
     
-    var populateLists = function (data){
-       $.each(data,function(index,element){
+    var populateLists = function(data){
+        $.each(data,function(index,element){
            if(index === "callConfiguration"){
                generateSelectOptions(element);
            }else if(index === "menuConfiguration"){
@@ -34,12 +38,35 @@
     var generateSelectOptions = function(element){
          $.each(element,function(index){                       
              list          = element[index];         
-             listContainer = $("."+list.container);
-             
+             listContainer = list.container;
              listHtml      = constructListHtml(list);     
             
-             appendList(listHtml,listContainer); 
+             appendList(listHtml,listContainer);           
          });
+    };
+    
+    var generateMenuOptions = function(element){                      
+             menu           = element;         
+             menuHtml       = constructMenuHtml(menu);     
+             
+             appendMenu(menuHtml);        
+    };
+    
+    var constructMenuHtml = function(menuOptions){
+        menuHtml  = "<ul id='horizontalMenuLeft' class='horizontal-menu-left'>{options}</ul>";
+          
+        options = "";
+     
+        $.each(menuOptions,function(index){
+            item = "<li class='item'><a class='item-descr clearfix' href='{url}'>{label}</a></li>";
+            item = item.replace("{url}",menuOptions[index].url).replace("{label}",menuOptions[index].label);
+            
+            options+=item;
+        });
+        
+        menuHtml = menuHtml.replace("{options}",options);
+        
+        return menuHtml;
     };
     
     var constructListHtml = function(list){        
@@ -51,8 +78,7 @@
         
         listHtml = listHtml.replace("{list_name}",list_name).replace("{list_class}",list_class);
         
-        options = "";     
-        
+        options = "";       
         $.each(list_options,function(index){                      
             optionHtml = "<option class='{class}' value='{value}'>{label}</option>";
             optionHtml = optionHtml.replace("{class}",list_options[index].class).replace("{value}",list_options[index].value).replace("{label}",list_options[index].label);
@@ -62,22 +88,17 @@
         
        listHtml = listHtml.replace("{options}",options);     
             
-       return listHtml;     
-       
+       return listHtml;       
     };
     
-    var appendList = function(listHtml,listContainer){      
-       listContainer.append(listHtml);
+    
+    var appendList = function(htmlContent,container){      
+       $("."+container).append(htmlContent);
+    };   
+    
+    var appendMenu = function(htmlContent){
+        $(".menu-bar-icon").after(htmlContent);
     };
     
-    var generateMenuOptions =function(element){
-        return;
-    };  
-    
-    var _init = function(){        
-        callPopulateLists();
-        
-    };
-    
-    _init();
+    callPopulateLists();
  };

@@ -48,7 +48,7 @@
         
 	"menuConfiguration": [                
                   {
-                          "label": "Home",
+                          "label": "Acasa",
                           "url": "home.html"
                   },
                   {

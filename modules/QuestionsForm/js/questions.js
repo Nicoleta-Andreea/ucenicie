@@ -18,6 +18,7 @@ var initAskQuestionsClass = function(config){
     };
     
     var askQuestionsSubscriptionMessage = function(data){
+        messageContainer.toggleClass("displayblock");
         messageContainer.html(data);
     };
     
