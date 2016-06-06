@@ -46,14 +46,27 @@
 		}
 	],
         
-	"menuConfiguration": [
-		{
-			"label": "Home",
-			"url": "/home"
-		},
-		{
-			"label": "About",
-			"url": "/about"
-		}
-	]
+	"menuConfiguration": [                
+                  {
+                          "label": "Home",
+                          "url": "home.html"
+                  },
+                  {
+                           "label": "Store",
+                           "url": "store.html"
+                  },
+                  {
+                           "label": "Blog",
+                           "url": "blog.html"
+                  },
+                  {
+                          "label": "About",
+                          "url": "about.html"
+                  },
+                  {
+                          "label": "Contact",
+                          "url": "contact.html"
+                  }
+                ]   
+      
 }

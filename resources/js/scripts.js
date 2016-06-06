@@ -3,15 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(document).ready(function(){
+/*$(document).ready(function(){
     var configGeneral     =  new configGeneralScriptClass(),
         initCookieDisclaimer  =  new initCookieDisclaimerClass(),    
         initAccordion         =  new initAccordionClass();  
-});
+});*/
 
 
-$(window).load(function(){
-     /*callPopulateLists();
+$(document).ready(function(){
+    var initConfig            =  new initConfigClass(),     
+       
+        initCookieDisclaimer  =  new initCookieDisclaimerClass(),    
+        initAccordion         =  new initAccordionClass(),               
+       
+        url                   =  initConfig.setActionUrl("nl_subscription"),    
+        ConfigObject          =  {"url": url},    
+        initNlSubscription    =  new initNlSubscriptionClass(ConfigObject),    
+       
+        url                   =  initConfig.setActionUrl("ask_questions"),            
+        ConfigObject          =  {"url": url}, 
+        initAskQuestions      =  new initAskQuestionsClass(ConfigObject);   
+    
     
      function callPopulateLists(){
         url = "http://localhost/first_project/first_app/public_html/resources/js/config_general/config_options.json";        
@@ -19,7 +31,9 @@ $(window).load(function(){
         $.ajax({
                   url: url,
                   success:function(data) {                        
-                      populateLists(data);
+                      populateLists(data);                            
+                      initConfig            =  new initConfigClass();
+                      
                                         
                    },
                    error: function(xhr) {
@@ -29,7 +43,7 @@ $(window).load(function(){
     }
     
     function populateLists(data){
-       $.each(data,function(index,element){
+        $.each(data,function(index,element){
            if(index === "callConfiguration"){
                generateSelectOptions(element);
            }else if(index === "menuConfiguration"){
@@ -44,8 +58,33 @@ $(window).load(function(){
              listContainer = list.container;
              listHtml      = constructListHtml(list);     
             
-             appendList(listHtml,listContainer); 
+             appendList(listHtml,listContainer);           
          });
+    }
+    
+    function generateMenuOptions(element){                      
+             menu           = element;         
+             menuHtml       = constructMenuHtml(menu);     
+             
+             appendMenu(menuHtml);           
+             
+    }
+    
+    function constructMenuHtml(menuOptions){
+        menuHtml  = "<ul id='horizontalMenuLeft' class='horizontal-menu-left'>{options}</ul>";
+          
+        options = "";
+     
+        $.each(menuOptions,function(index){
+            item = "<li class='item'><a class='item-descr clearfix' href='{url}'>{label}</a></li>";
+            item = item.replace("{url}",menuOptions[index].url).replace("{label}",menuOptions[index].label);
+            
+            options+=item;
+        });
+        
+        menuHtml = menuHtml.replace("{options}",options);
+        
+        return menuHtml;
     }
     
     function constructListHtml(list){        
@@ -66,31 +105,20 @@ $(window).load(function(){
             options+=optionHtml;
         });
         
-       listHtml = listHtml.replace("{options}",options);       
-      
-       return listHtml; 
-       
+       listHtml = listHtml.replace("{options}",options);     
+            
+       return listHtml;       
     }
     
-    function appendList(listHtml,listContainer){      
-       $("."+listContainer).append(listHtml);
-    };
     
-    function generateMenuOptions(element){
-        return;
-    }*/
+    function appendList(htmlContent,container){      
+       $("."+container).append(htmlContent);
+    }   
     
-   
-    var initConfig            =  new initConfigClass(),          
-       
-        url                   =  initConfig.setActionUrl("nl_subscription"),    
-        ConfigObject          =  {"url": url},    
-        initNlSubscription    =  new initNlSubscriptionClass(ConfigObject), 
-   
-       
-        url                   =  initConfig.setActionUrl("ask_questions"),            
-        ConfigObject          =  {"url": url}, 
-        initAskQuestions      =  new initAskQuestionsClass(ConfigObject);       
-           
+    function appendMenu(htmlContent){
+        $(".menu-bar-icon").after(htmlContent);
+    }
+    
+    callPopulateLists();
     
 });

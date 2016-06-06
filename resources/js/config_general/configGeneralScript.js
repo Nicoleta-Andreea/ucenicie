@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- var configGeneralScriptClass = function(){   
-     var callPopulateLists = function(){
+ var configGeneralScriptClass = function(){
+    var callPopulateLists = function(){
         url = "http://localhost/first_project/first_app/public_html/resources/js/config_general/config_options.json";        
         
         $.ajax({
                   url: url,
                   success:function(data) {                        
                       populateLists(data);
-                                        
-                   },
-                   error: function(xhr) {
+                      populateLists(data);                            
+                      initConfig    =  new initConfigClass();
+                      
+                  },
+                  error: function(xhr) {
                        console.log(xhr);
-                   }
+                  }
         });        
     };
     
@@ -49,24 +51,18 @@
         
         listHtml = listHtml.replace("{list_name}",list_name).replace("{list_class}",list_class);
         
-        options = "";  
+        options = "";     
         
-        optionHtml = "<option class='{class}' value='{value}' selected>{label}</option>";        
-        optionHtml = optionHtml.replace("{class}",list_options[0].class).replace("{value}",list_options[0].value).replace("{label}",list_options[0].label);
-        options+=optionHtml;
-        
-        $.each(list_options,function(index){
-            if(index !== 0){
-                optionHtml = "<option class='{class}' value='{value}'>{label}</option>";
-                optionHtml = optionHtml.replace("{class}",list_options[index].class).replace("{value}",list_options[index].value).replace("{label}",list_options[index].label);
-                options+=optionHtml;
-            }          
+        $.each(list_options,function(index){                      
+            optionHtml = "<option class='{class}' value='{value}'>{label}</option>";
+            optionHtml = optionHtml.replace("{class}",list_options[index].class).replace("{value}",list_options[index].value).replace("{label}",list_options[index].label);
             
+            options+=optionHtml;
         });
         
-       listHtml = listHtml.replace("{options}",options);       
-      
-       return listHtml; 
+       listHtml = listHtml.replace("{options}",options);     
+            
+       return listHtml;     
        
     };
     
@@ -79,7 +75,8 @@
     };  
     
     var _init = function(){        
-       callPopulateLists();
+        callPopulateLists();
+        
     };
     
     _init();
