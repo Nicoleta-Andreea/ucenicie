@@ -13,21 +13,22 @@ var initAskQuestionsClass = function(config){
         url                      =  (typeof config !== 'undefined' && typeof config.url !== 'undefined') ? config.url : '',
         askForm                  =  askQuestionsContainer.find("#askForm");
     
-    extern.setNLUrl = function(newUrl) {
+   /* extern.setNLUrl = function(newUrl) {
         url = newUrl;
-    };
+    };*/
     
     var askQuestionsSubscriptionMessage = function(data){
         messageContainer.toggleClass("displayblock");
         messageContainer.html(data);
     };
     
-    extern.setUrl = function(url){
+    var setUrl = function(data){             
+        url      = data.url["ask_questions"];
         this.url = url;
         return url;
-    };
+    };   
     
-    extern.askQuestionsSubscription = function(){              
+    var askQuestionsSubscription = function(){              
         askForm.validate();       
         if((askForm).valid()){
             $.ajax({
@@ -43,17 +44,18 @@ var initAskQuestionsClass = function(config){
     };
     
     var attachHandlers = function(){      
-        submit_button.click(extern.askQuestionsSubscription);
+        submit_button.click(askQuestionsSubscription);
     };
     
     var _init = function(){
+       $("body").bind("setUrl",function(url){
+           setUrl(url);
+       });   
        attachHandlers();   
     };
     
     _init();
-
     
-    return extern;   
-    
+    return extern;        
 };
 

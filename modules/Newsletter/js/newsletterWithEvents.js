@@ -12,23 +12,21 @@ var initNlSubscriptionClass = function(config){
         messageContainer         =  nlSubscriptionContainer.find(".subscribe-message"),
         url                      =  (typeof config !== 'undefined' && typeof config.url !== 'undefined') ? config.url : '',
         nlForm                   =  nlSubscriptionContainer.find("#signupForm");
-    
-    extern.setNLUrl = function(newUrl) {
-        url = newUrl;
-    };
+ 
     
     var nlSubscriptionMessage = function(data){
         messageContainer.html(data);
     };
     
-    extern.setUrl = function(url){
+    var setUrl = function(data){             
+        url      = data.url["nl_subscription"];
         this.url = url;
         return url;
-    };
+    };   
     
-    extern.nlSubscription = function(){
-        nlForm.validate();       
-        if((nlForm).valid()){
+    var nlSubscription = function(){
+       nlForm.validate();         
+       if((nlForm).valid()){
             $.ajax({
                   url: url,
                   success:function(data) {
@@ -38,21 +36,21 @@ var initNlSubscriptionClass = function(config){
                        console.log(xhr);
                    }
             });  
-        }
+        }       
     };
     
     var attachHandlers = function(){      
-        submit_button.click(extern.nlSubscription);
+        submit_button.click(nlSubscription);
     };
     
-    var _init = function(){
-       attachHandlers();   
+    var _init = function(){        
+        $("body").bind("setUrl",function(url){
+           setUrl(url);
+       });       
+       attachHandlers();     
     };
     
-    _init();
-
-    
-    return extern;
-    
+    _init();  
+    return extern;    
 };
 

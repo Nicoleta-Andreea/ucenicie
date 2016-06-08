@@ -6,12 +6,14 @@
 
 var initConfigClass = function(){   
     var extern                   =  {},
-        configObj                =  {};
+        configObj                =  {};       
     
-     extern.setData = function(){
-         listsContainer           =  $(".options-lists");
-         options                  =  listsContainer.find(".config");
-     };
+    var setData = function(){
+         listsContainer   =  $(".options-lists");
+         options          =  listsContainer.find(".config");
+         
+         return [listsContainer,options];        
+    };
         
     var updateLocalStorage = function(field_name,new_value){
          var config = JSON.parse(localStorage.getItem("config"));       
@@ -33,31 +35,29 @@ var initConfigClass = function(){
         return selectedValue;
     };       
     
-    changeOption = function(){
+    var changeOption = function(){
+        ConfigObject={};        
         list = $(this);        
         configType = getListName(list);        
-        selectedValue = getSelectedValue(list);        
+        selectedValue = getSelectedValue(list);     
+        
         updateLocalStorage(configType,selectedValue);      
-        extern.setActionUrl(configType);
         setSelectedValue(list,configType); 
         
-        url = extern.setActionUrl(configType);
-        ConfigObject = {"url":url}; 
-                
-        if(configType === "nl_subscription"){        
-             initNlSubscription    =  new initNlSubscriptionClass(ConfigObject);
-        }else{
-            initAskQuestions  = new initAskQuestionsClass(ConfigObject);
-        }    
+        url = setActionUrl(configType);
+        ConfigObject[configType] =url;          
         
-        //$("body").trigger()
+        $( "body" ).trigger({
+            type:"setUrl",
+            url:ConfigObject
+        });
     };     
      
-    extern.setActionUrl = function(key){ 
+    var setActionUrl = function(key){       
         var config  = getConfig(),      
                       keyValue = config[key],                                    
                       url = "http://localhost/first_project/first_app/public_html/resources/js/"+key+"/files/"+keyValue+".json";   
-           
+              
         return url;
     };
     
@@ -75,13 +75,14 @@ var initConfigClass = function(){
             list           =  $(this);
             listName       =  getListName(list);
             selectedValue  =  getSelectedValue(list);   
-            configObj[listName] = selectedValue;
-        });        
-        saveConfig();
-        config = JSON.parse(localStorage.getItem("config"));             
+            configObj[listName] = selectedValue;                    
+        });         
+        saveConfig();       
+       
+        config = JSON.parse(localStorage.getItem("config"));         
     };
     
-    saveConfig = function(){       
+    var saveConfig = function(){       
         if(typeof(Storage) !== "undefined"){
             localStorage.setItem("config",JSON.stringify(configObj));
         }else{
@@ -94,40 +95,56 @@ var initConfigClass = function(){
          return config;
     };   
     
-   extern.iterateOptions = function(){
-      var config = getConfig();      
+   var iterateOptions = function(){
+          config = getConfig();
+        
       
       if (getConfig()===null || $.isEmptyObject(config)){
           initConfig();
-      }else{  
-        
+          ConfigObject = {};
+          
+          configObject["nl_subscription"]  =  setActionUrl("nl_subscription");
+          configObject["ask_questions"]    =  setActionUrl("ask_questions");
+      }else{      
+         ConfigObject = {};  
          $.each(options,function(){
               list = $(this);
               configType = getListName(list);        
-              selectedValue = config[configType];        
-            
-              extern.setActionUrl(configType);            
-              setSelectedValue(list,configType);          
-       });  
-      } 
+              selectedValue = config[configType];            
+              url = setActionUrl(configType);            
+              setSelectedValue(list,configType); 
+              ConfigObject[configType]=url;
+         });       
+      }      
+      
+      $( "body" ).trigger({
+            type:"setUrl",
+            url:ConfigObject
+      });
     };    
- 
-    extern.attachHandlers = function(){      
+     
+    var attachHandlers = function(){      
        $.each(options,function(){
-           $(this).change(changeOption);          
+           $(this).change(changeOption);             
        });                
     };
     
     
-    var _init = function(){        
-       extern.setData();
-       extern.iterateOptions();       
-       extern.attachHandlers();
+    var _init = function(){  
+       $("body").bind("setData",function(){
+           setData();
+       });
+       $("body").bind("iterateOptions",function(){
+           iterateOptions();
+       });
+       $("body").bind("attachHandlers",function(){
+           attachHandlers();
+       });      
        
     };
     
-    _init();
-  
+    _init();  
     
     return extern;
 };
+
