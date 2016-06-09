@@ -13,17 +13,13 @@ var initAskQuestionsClass = function(config){
         url                      =  (typeof config !== 'undefined' && typeof config.url !== 'undefined') ? config.url : '',
         askForm                  =  askQuestionsContainer.find("#askForm");
     
-   /* extern.setNLUrl = function(newUrl) {
-        url = newUrl;
-    };*/
-    
     var askQuestionsSubscriptionMessage = function(data){
         messageContainer.toggleClass("displayblock");
         messageContainer.html(data);
     };
     
-    var setUrl = function(data){             
-        url      = data.url["ask_questions"];
+    var setUrl = function(data){           
+        url      = data.url.ask_questions;        
         this.url = url;
         return url;
     };   

@@ -1,0 +1,46 @@
+[
+  {
+    "image": "img.png",
+    "description": {
+      "text": "Lorem ipsum",
+      "extra": {
+        "title": "Item title",
+        "content": "Item description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "url", "url - opens url in new window/info - renders data in modal"
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of modal",
+        "content": "Content of modal"
+      }
+    }
+  },
+  {
+    "image": "img.png",
+    "description": {
+      "text": "Lorem ipsum",
+      "extra": {
+        "title": "Item title",
+        "content": "Item description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info", "url - opens url in new window/info - renders data in modal"
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of modal",
+        "content": "Content of modal"
+      }
+    }
+  }
+]

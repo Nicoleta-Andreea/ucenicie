@@ -36,7 +36,7 @@ var initConfigClass = function(){
     };       
     
     var changeOption = function(){
-        ConfigObject={};        
+        configObject={};        
         list = $(this);        
         configType = getListName(list);        
         selectedValue = getSelectedValue(list);     
@@ -45,11 +45,11 @@ var initConfigClass = function(){
         setSelectedValue(list,configType); 
         
         url = setActionUrl(configType);
-        ConfigObject[configType] =url;          
+        configObject[configType] =url;          
         
         $( "body" ).trigger({
             type:"setUrl",
-            url:ConfigObject
+            url:configObject
         });
     };     
      
@@ -96,30 +96,27 @@ var initConfigClass = function(){
     };   
     
    var iterateOptions = function(){
-          config = getConfig();
-        
+        var config = getConfig(),
+            configObject = {};
       
       if (getConfig()===null || $.isEmptyObject(config)){
-          initConfig();
-          ConfigObject = {};
-          
+          initConfig();        
           configObject["nl_subscription"]  =  setActionUrl("nl_subscription");
           configObject["ask_questions"]    =  setActionUrl("ask_questions");
       }else{      
-         ConfigObject = {};  
-         $.each(options,function(){
+        $.each(options,function(){
               list = $(this);
               configType = getListName(list);        
               selectedValue = config[configType];            
               url = setActionUrl(configType);            
               setSelectedValue(list,configType); 
-              ConfigObject[configType]=url;
+              configObject[configType]=url;
          });       
       }      
       
       $( "body" ).trigger({
             type:"setUrl",
-            url:ConfigObject
+            url:configObject
       });
     };    
      

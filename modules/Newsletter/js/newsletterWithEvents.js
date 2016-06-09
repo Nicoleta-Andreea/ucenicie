@@ -19,7 +19,7 @@ var initNlSubscriptionClass = function(config){
     };
     
     var setUrl = function(data){             
-        url      = data.url["nl_subscription"];
+        url      = data.url.nl_subscription;
         this.url = url;
         return url;
     };   
