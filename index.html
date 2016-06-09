@@ -50,10 +50,12 @@ and open the template in the editor.
         
         <!--<script src="modules/QuestionsForm/js/questions.js"></script>-->
         <script src="modules/QuestionsForm/js/questionsWithEvents.js"></script>
+        <script src="modules/MenuHorizontal/js/search.js"> </script>
         
         <script src="resources/js/jquery/jquery.cookie.js"></script>
         <script src="modules/cookieDisclaimer/js/cookieDisclaimer.js"> </script>
         <script src="resources/js/accordion/accordion.js"> </script>
+       
         
         <!--<script src="resources/js/config.js"> </script>
         <script src="resources/js/scripts.js"> </script>-->
@@ -150,7 +152,14 @@ and open the template in the editor.
                                 </li>                    
                             </ul>    
                       </nav>                       
-                  <!-- END HORIZONTAL MENU -->              
+                  <!-- END HORIZONTAL MENU -->  
+                  <!-- SEARCH RESULTS -->
+                    <div class="search-results hide">                          
+                         <ul class="search-results-list"> 
+                             
+                         </ul>    
+                    </div>
+                  <!-- END SEARCH RESULTS -->                   
                 </div> 
                 <div class="row row-2 clearfix">
                     <div class="column column-1">
@@ -852,7 +861,11 @@ and open the template in the editor.
                          </div>
                          
                      </div> 
-                </div>    
+                </div>  
+               
+               <div class="overlay hide">
+                    
+               </div>
             </div>             
     </body>
 </html>

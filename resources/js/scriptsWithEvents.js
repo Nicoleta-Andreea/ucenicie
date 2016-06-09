@@ -8,9 +8,10 @@ $(document).ready(function(){
         initConfig            =  new initConfigClass(),
         initNlSubscription    =  new initNlSubscriptionClass(),    
         initAskQuestions      =  new initAskQuestionsClass(),   
-        initConfigGeneral     =  new configGeneralScriptClass(),        
-       
-        initCookieDisclaimer  =  new initCookieDisclaimerClass(),    
+        initConfigGeneral     =  new configGeneralScriptClass(),
+        
+        initCookieDisclaimer  =  new initCookieDisclaimerClass(),  
+        initSearch            =  new searchClass(),
         initAccordion         =  new initAccordionClass();        
        
         /*url                   =  initConfig.setActionUrl("nl_subscription"),   

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "about",
+    "title": "Lorem ipsum",
+    "image": "img1.jpg",
+    "content": "Lorem ipsum"
+  },
+  {
+    "id": "team",
+    "title": "Lorem ipsum",
+    "image": "img1.jpg",
+    "content": "Lorem ipsum"
+  }
+]

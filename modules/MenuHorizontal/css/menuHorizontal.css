@@ -46,6 +46,7 @@ and open the template in the editor.
 }
 .nav-bar-container .icon.fa-search{
     border-right:1px solid #dde2e4;
+    z-index:5;
 }
 .nav-bar-container .icon.fa-user{
     border-left:1px solid #dde2e4;
@@ -84,10 +85,11 @@ and open the template in the editor.
     height:60px;
     width:60px;
     position:relative;
-    float:left;
+    float:left;  
+    z-index:3;
 }
 .horizontal-menu-right .search-wrapper.visible{
-    width:200px;    
+    width:200px;      
 }
 .horizontal-menu-right .search-wrapper.visible .icon.fa-search{  
     border-right:0px;
@@ -108,11 +110,11 @@ and open the template in the editor.
     border-color:#dde2e4;
     height:60px;
     padding:0px 10px 0 40px;
-    left: 10px;  
-    z-index: -1;
+    left:10px;  
+    display:none;
 }
 .horizontal-menu-right .visible .search-text{
-    z-index: 0; 
+    display:block;
 }
 .horizontal-menu-right .submit-search{
     position: absolute;
@@ -126,9 +128,9 @@ and open the template in the editor.
     border: 1px solid #dde2e4;
     cursor: pointer;
     color:#475055;
-    z-index:1;
+    z-index:3;
 }
 .horizontal-menu-right .search-text:focus{              
-        color:#475055;
-        font-style:normal;
+     color:#475055;
+     font-style:normal;
 }
