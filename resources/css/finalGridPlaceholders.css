@@ -37,9 +37,8 @@ body{
     z-index:2;
     right:0;
     background:#fff;
-    z-index:2;
-    padding:40px 20px;
-    line-height: 30px;
+    padding:40px 20px 20px 20px;
+    line-height:30px;
 }
 .wrapper .options-lists{
     color:#475055;

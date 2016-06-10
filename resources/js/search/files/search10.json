@@ -1,0 +1,25 @@
+[
+  {
+    "image": "img_first.png",
+    "large_image":"img_first_large.png",
+    "description": {
+      "text": "First item description. Home page",
+      "extra": {
+        "title": "Home",
+        "content": "First Item long description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "url", 
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of first modal",
+        "content": "Content of first modal"
+      }
+    }
+  }
+]

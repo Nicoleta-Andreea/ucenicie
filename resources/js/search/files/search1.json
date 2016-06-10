@@ -1,6 +1,7 @@
 [
   {
     "image": "img_first.png",
+    "large_image":"img_first_large.png",
     "description": {
       "text": "First item description. Home page",
       "extra": {
@@ -23,6 +24,7 @@
   },
   {
     "image": "img_second.png",
+    "large_image":"img_second_large.png",
     "description": {
       "text": "Lorem ipsum second item description",
       "extra": {
@@ -45,6 +47,7 @@
   },
   {
     "image": "img_third.png",
+    "large_image":"img_third_large.png",
     "description": {
       "text": "Lorem ipsum third item description",
       "extra": {
@@ -67,6 +70,7 @@
   },
   {
     "image": "img_fourth.png",
+    "large_image":"img_fourth_large.png",
     "description": {
       "text": "Lorem ipsum fourth item description",
       "extra": {
@@ -89,6 +93,7 @@
   },
   {
     "image": "img_fifth.png",
+    "large_image":"img_fifth_large.png",
     "description": {
       "text": "Lorem ipsum fifth item description",
       "extra": {
@@ -111,6 +116,7 @@
   },
   {
     "image": "img_6.png",
+    "large_image":"img_6_large.png",
     "description": {
       "text": "Lorem ipsum text no 6. Lorem ipsum....",
       "extra": {
@@ -133,6 +139,7 @@
   },
   {
     "image": "img_7.png",
+    "large_image":"img_7_large.png",
     "description": {
       "text": "Lorem ipsum text no 7. Lorem ipsum",
       "extra": {
@@ -155,6 +162,7 @@
   },
   {
     "image": "img_8.png",
+    "large_image":"img_8_large.png",
     "description": {
       "text": "Lorem ipsum text no 8. Lorem ipsum....lorem ipsum",
       "extra": {
@@ -177,6 +185,7 @@
   },
   {
     "image": "img_9.png",
+    "large_image":"img_9_large.png",
     "description": {
       "text": "Lorem ipsum item no 9 description",
       "extra": {
@@ -199,6 +208,7 @@
   },
   {
     "image": "img_10.png",
+    "large_image":"img_10_large.png",
     "description": {
       "text": "Lorem ipsum. Item no 10 detailed description",
       "extra": {

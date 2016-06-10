@@ -112,8 +112,7 @@ var initConfigClass = function(){
               setSelectedValue(list,configType); 
               configObject[configType]=url;
          });       
-      }      
-      
+      }       
       $( "body" ).trigger({
             type:"setUrl",
             url:configObject
@@ -128,9 +127,8 @@ var initConfigClass = function(){
     
     
     var _init = function(){  
-       $("body").bind("setData",function(){
-           setData();
-       });
+       $("body").bind("setData",setData);
+       
        $("body").bind("iterateOptions",function(){
            iterateOptions();
        });

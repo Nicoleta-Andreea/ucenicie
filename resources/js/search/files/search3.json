@@ -1,0 +1,186 @@
+[
+  {
+    "image": "img_first.png",
+    "large_image":"img_first_large.png",
+    "description": {
+      "text": "First item description. Home page",
+      "extra": {
+        "title": "Home",
+        "content": "First Item long description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "url", 
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of first modal",
+        "content": "Content of first modal"
+      }
+    }
+  },
+  {
+    "image": "img_second.png",
+    "large_image":"img_second_large.png",
+    "description": {
+      "text": "Lorem ipsum second item description",
+      "extra": {
+        "title": "About site",
+        "content": "Second Item long description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of second modal",
+        "content": "Content of second modal"
+      }
+    }
+  },
+  {
+    "image": "img_third.png",
+    "large_image":"img_third_large.png",
+    "description": {
+      "text": "Lorem ipsum third item description",
+      "extra": {
+        "title": "Third Item title",
+        "content": "Third Item long description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of third modal",
+        "content": "Content of third modal"
+      }
+    }
+  },
+  {
+    "image": "img_fourth.png",
+    "large_image":"img_fourth_large.png",
+    "description": {
+      "text": "Lorem ipsum fourth item description",
+      "extra": {
+        "title": "Fourth Item title",
+        "content": "Fourth Item long description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of fourth modal",
+        "content": "Content of fourth modal"
+      }
+    }
+  },
+  {
+    "image": "img_fifth.png",
+    "large_image":"img_fifth_large.png",
+    "description": {
+      "text": "Lorem ipsum fifth item description",
+      "extra": {
+        "title": "Fifth Item title",
+        "content": "Fifth Item long description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of fifth modal",
+        "content": "Content of fifth modal"
+      }
+    }
+  },
+  {
+    "image": "img_6.png",
+    "large_image":"img_6_large.png",
+    "description": {
+      "text": "Lorem ipsum text no 6. Lorem ipsum....",
+      "extra": {
+        "title": "Item no 6 title",
+        "content": "Item no 6 description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of modal no 6",
+        "content": "Content of modal no 6"
+      }
+    }
+  },
+  {
+    "image": "img_7.png",
+    "large_image":"img_7_large.png",
+    "description": {
+      "text": "Lorem ipsum text no 7. Lorem ipsum",
+      "extra": {
+        "title": "Item no 7 title",
+        "content": "Item no 7 description. Detailed description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of modal no 7",
+        "content": "Content of modal no 7"
+      }
+    }
+  },
+  {
+    "image": "img_8.png",
+    "large_image":"img_8_large.png",
+    "description": {
+      "text": "Lorem ipsum text no 8. Lorem ipsum....lorem ipsum",
+      "extra": {
+        "title": "Item no 8 title",
+        "content": "Item no 8 description. Detailed description",
+        "image": [
+          "img1.jpg",
+          "img2.jpg"
+        ]
+      }
+    },
+    "info": {
+      "type": "info",
+      "url": "www.google.ro",
+      "data": {
+        "headline": "Headline of modal no 8",
+        "content": "Content of modal no 8"
+      }
+    }
+  }  
+]

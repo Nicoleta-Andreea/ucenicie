@@ -36,9 +36,13 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="modules/CookieDisclaimer/css/cookieDisclaimer.css">
         <link rel="stylesheet" type="text/css" href="resources/css/finalGridPlaceholders.css">
         <link rel="stylesheet" type="text/css" href="resources/css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/jquery-ui.theme.css">
         
         <script src="resources/js/jquery/jquery-1.12.4.js"></script>        
         <script src="resources/js/jquery/jquery.validate.min.js"></script>
+        <script src="resources/js/jquery-ui/jquery-ui.js"></script>
         
         <!--<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script> -->        
         <!--<script src="resources/js/config_general/configGeneralScript.js"> </script> -->
@@ -126,7 +130,7 @@ and open the template in the editor.
                                 <li class="item">
                                    <span class="search-wrapper">
                                        <i class="fa fa-x fa-search icon" id="searchIcon"></i> 
-                                       <input type="text" placeholder="Cauta ... " class="search-text" id="searchText" />  
+                                       <input type="text" placeholder="Cauta ... " class="search-text" id="searchText" maxlength="10" />  
                                        <input type="button" value="Cauta" class="submit-search hide" id="submitSearch" />
                                    </span>                        
                                 </li>
@@ -155,7 +159,7 @@ and open the template in the editor.
                   <!-- END HORIZONTAL MENU -->  
                   <!-- SEARCH RESULTS -->
                     <div class="search-results hide">                          
-                         <ul class="search-results-list"> 
+                         <ul class="search-results-list clearfix"> 
                              
                          </ul>    
                     </div>

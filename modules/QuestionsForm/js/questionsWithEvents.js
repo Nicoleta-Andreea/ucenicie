@@ -20,8 +20,7 @@ var initAskQuestionsClass = function(config){
     
     var setUrl = function(data){           
         url      = data.url.ask_questions;        
-        this.url = url;
-        return url;
+        this.url = url;      
     };   
     
     var askQuestionsSubscription = function(){              

@@ -134,3 +134,46 @@ and open the template in the editor.
      color:#475055;
      font-style:normal;
 }
+.search-results{
+    position:absolute;
+    width:50%;
+    z-index:2;
+    right:0;
+    background:#fff;
+    z-index:2;
+    padding:30px 20px;
+    line-height: 30px;
+}
+.search-results .search-results-list{
+    color:#475055;
+    background:#fff;
+    margin:0;
+}
+.search-results .search-results-list .list-item{
+    line-height:50px;
+    width:100%;
+}
+.search-results .search-results-list .image-section{
+    width:50px;
+    height:50px;
+}
+.search-results .search-results-list .list-item-content{
+    width:280px;
+    line-height:25px;
+}
+.search-results .search-results-list .image-section,
+.search-results .search-results-list .list-item-content{
+    float:left;
+    margin:0 10px 0 0;
+    cursor:pointer;
+}
+.search-results .search-results-list .fa-info{
+    cursor:pointer;
+    float:right;
+    height:25px;
+    width:25px;
+    border:1px solid  #dde2e4;
+    line-height:25px;
+    text-align:center;
+    border-radius:50%;
+}
