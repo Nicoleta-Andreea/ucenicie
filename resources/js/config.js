@@ -116,18 +116,15 @@ var initConfigClass = function(){
        $.each(options,function(){
            $(this).change(changeOption);          
        });                
-    };
-    
+    };    
     
     var _init = function(){        
        extern.setData();
        extern.iterateOptions();       
-       extern.attachHandlers();
-       
+       extern.attachHandlers();       
     };
     
-    _init();
-  
+    _init(); 
     
     return extern;
 };

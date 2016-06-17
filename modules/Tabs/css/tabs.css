@@ -53,11 +53,19 @@ and open the template in the editor.
     padding:29px 30px 28px 30px;
     width:100%;
 }
-#tab1:checked ~ .tabs-content-wrapper #content1,
-#tab2:checked ~ .tabs-content-wrapper #content2,
-#tab3:checked ~ .tabs-content-wrapper #content3,
-#tab4:checked ~ .tabs-content-wrapper #content4,
-#tab5:checked ~ .tabs-content-wrapper #content5{
+.overlay .content-dialog{
+    display:none;
+}
+.tabs-content-wrapper .content .image,
+.tabs-content-wrapper .content .title,
+.tabs-content-wrapper .content .content-text{
+    cursor:pointer;
+}
+#about:checked ~ .tabs-content-wrapper #aboutContent,
+#team:checked ~ .tabs-content-wrapper #teamContent,
+#privacy:checked ~ .tabs-content-wrapper #privacyContent,
+#advertise:checked ~ .tabs-content-wrapper #advertiseContent,
+#contact:checked ~ .tabs-content-wrapper #contactContent{
      display: block;
 }
 .tabs-content-wrapper .content .post-section{

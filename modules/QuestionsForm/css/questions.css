@@ -40,7 +40,6 @@ and open the template in the editor.
     font-weight:300;
 }
 .questions-wrapper .subscribe-message{
-    display:block;
     position: absolute;
     bottom: 75px;
     font-style: italic;

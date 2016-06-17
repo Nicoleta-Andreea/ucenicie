@@ -51,7 +51,7 @@
     };
     
     var constructMenuHtml = function(menuOptions){
-        menuHtml  = "<ul id='horizontalMenuLeft' class='horizontal-menu-left'>{options}</ul>";          
+        menuHtml  = "<ul id='horizontalMenuLeft' class='horizontal-menu-left  hide'>{options}</ul>";          
         options = "";
      
         $.each(menuOptions,function(index){

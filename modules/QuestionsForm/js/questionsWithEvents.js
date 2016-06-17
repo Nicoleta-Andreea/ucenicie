@@ -5,11 +5,13 @@
  */
 
 var initAskQuestionsClass = function(config){    
-    var extern = {},
+    var extern                   =  {},
         askQuestionsContainer    =  $('.questions-wrapper'),    
-        messageContainer         =  askQuestionsContainer.find(".subscribe-message"),
         submit_button            =  askQuestionsContainer.find(".submit-button"),  
         messageContainer         =  askQuestionsContainer.find(".subscribe-message"),
+        questionField            =  askQuestionsContainer.find(".question"),
+        nameField                =  askQuestionsContainer.find(".name"),
+        emailAddressField        =  askQuestionsContainer.find(".email-address"),
         url                      =  (typeof config !== 'undefined' && typeof config.url !== 'undefined') ? config.url : '',
         askForm                  =  askQuestionsContainer.find("#askForm");
     
@@ -19,17 +21,28 @@ var initAskQuestionsClass = function(config){
     };
     
     var setUrl = function(data){           
-        url      = data.url.ask_questions;        
-        this.url = url;      
+        url   = data.url.ask_questions;        
+        this.url  =  url;      
     };   
     
     var askQuestionsSubscription = function(){              
         askForm.validate();       
         if((askForm).valid()){
+            var name          =  nameField.val(),
+                emailAddress  =  emailAddressField.val(),
+                question      =  questionField.val(),
+                formData      =  {name:name,email_address:emailAddress,question:question};
             $.ajax({
+                  type:"POST",
+                  dataType:"json",
+                  data:formData,
                   url: url,
                   success:function(data) {
                      askQuestionsSubscriptionMessage(data.message);
+                     $( "body" ).trigger({
+                        type:"showMessagecontainer",
+                        messageContainer:messageContainer
+                      });   
                    },
                    error: function(xhr) {
                        console.log(xhr);
@@ -38,8 +51,14 @@ var initAskQuestionsClass = function(config){
         }
     };
     
-    var attachHandlers = function(){      
-        submit_button.click(askQuestionsSubscription);
+    var attachHandlers = function(){
+        questionField.focus(function(){
+             $( "body" ).trigger({
+                type:"hideMessageContainer",
+                messageContainer:messageContainer
+              });
+        });
+        submit_button.click(askQuestionsSubscription);     
     };
     
     var _init = function(){

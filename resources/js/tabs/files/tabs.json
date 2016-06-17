@@ -1,0 +1,32 @@
+[
+  {
+    "id": "about",
+    "title": "Lorem ipsum about",
+    "image": "img1.jpg",
+    "content": "Lorem ipsum about content"
+  },
+  {
+    "id": "team",
+    "title": "Lorem ipsum team",
+    "image": "img1.jpg",
+    "content": "Lorem ipsum team content"
+  },
+  {
+      "id":"privacy",
+      "title":"Lorem ipsum privacy",
+      "image":"img1.jpg",
+      "content":"Lorem ipsum privacy content"
+  },
+  {
+      "id":"advertise",
+      "title":"Lorem ipsum advertise",
+      "image":"img1.jpg",
+      "content":"Lorem ipsum advertise content"
+  },
+  {
+      "id":"contact",
+      "title":"Lorem ipsum contact",
+      "image":"img1.jpg",
+      "content":"Lorem ipsum contact content"
+  }
+]

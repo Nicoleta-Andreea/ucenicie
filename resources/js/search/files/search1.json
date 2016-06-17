@@ -118,10 +118,10 @@
     "image": "img_6.png",
     "large_image":"img_6_large.png",
     "description": {
-      "text": "Lorem ipsum text no 6. Lorem ipsum....",
+      "text": "Lorem ipsum text no 6. Lorem ipsum la la la la la la la ....",
       "extra": {
         "title": "Item no 6 title",
-        "content": "Item no 6 description",
+        "content": "Lorem ipsum text no 6. Lorem ipsum la la la la la la la .....Item no 6 description",
         "image": [
           "img1.jpg",
           "img2.jpg"

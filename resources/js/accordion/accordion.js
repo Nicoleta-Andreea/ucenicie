@@ -19,7 +19,7 @@ var initAccordionClass = function(){
         };
           
         var handleContent = function(content){
-            $(content).slideToggle(); 
+            $(content).toggleClass("hide"); 
         };
         
         var attachHandlers = function(content){
@@ -33,12 +33,12 @@ var initAccordionClass = function(){
         var attachHandlersForAllElements = function(){
             accordionElementsContainers.each(function() {
                 var element = $(this);
-                $(this).show();
+                $(this).toggleClass("hide");
                 attachHandlers(element);
                 if($(window).innerWidth() <= 480){
-                    $(this).hide();                
+                    $(this).toggleClass("hide");                
                 }else{
-                    $(this).show();
+                    $(this).toggleClass("hide");
                 }                
             });             
         };

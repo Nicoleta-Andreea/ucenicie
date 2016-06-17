@@ -8,8 +8,8 @@ var initNlSubscriptionClass = function(config){
     var extern = {},
         nlSubscriptionContainer  =  $('.newsletter-wrapper'),    
         messageContainer         =  nlSubscriptionContainer.find(".subscribe-message"),
-        submit_button            =  nlSubscriptionContainer.find(".submit-button"),  
-        messageContainer         =  nlSubscriptionContainer.find(".subscribe-message"),
+        submit_button            =  nlSubscriptionContainer.find(".submit-button"), 
+        emailField               =  nlSubscriptionContainer.find(".email-address"),
         url                      =  (typeof config !== 'undefined' && typeof config.url !== 'undefined') ? config.url : '',
         nlForm                   =  nlSubscriptionContainer.find("#signupForm");
  
@@ -19,30 +19,43 @@ var initNlSubscriptionClass = function(config){
     };
     
     var setUrl = function(data){             
-        url      = data.url.nl_subscription;
-        this.url = url;
-        return url;
+        url   =  data.url.nl_subscription;
+        this.url  =  url;
     };   
     
-    var nlSubscription = function(){
-       nlForm.validate();         
-       if((nlForm).valid()){
+    var nlSubscription = function(email_address){
+        nlForm.validate();         
+        if((nlForm).valid()){
+            var formData = {email_address:email_address};
             $.ajax({
-                  url: url,
+                  url:url,
+                  type:"POST",
+                  dataType:"json",
+                  data:formData,
                   success:function(data) {
                      nlSubscriptionMessage(data.message);
+                       $( "body" ).trigger({
+                        type:"showMessagecontainer",
+                        messageContainer:messageContainer
+                      });                   
                    },
                    error: function(xhr) {
                        console.log(xhr);
                    }
             });  
         }       
-    };
-    
+    };     
     var attachHandlers = function(){      
-        submit_button.click(nlSubscription);
-    };
-    
+        emailField.focusin(function(){
+           $( "body" ).trigger({
+            type:"hideMessageContainer",
+            messageContainer:messageContainer
+          });
+        });
+        submit_button.click(function(){
+            nlSubscription(emailField.val());          
+        });
+    };    
     var _init = function(){        
         $("body").bind("setUrl",function(url){
            setUrl(url);

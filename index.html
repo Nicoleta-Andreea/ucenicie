@@ -55,6 +55,7 @@ and open the template in the editor.
         <!--<script src="modules/QuestionsForm/js/questions.js"></script>-->
         <script src="modules/QuestionsForm/js/questionsWithEvents.js"></script>
         <script src="modules/MenuHorizontal/js/search.js"> </script>
+        <script src="modules/Tabs/js/tabs.js"> </script>
         
         <script src="resources/js/jquery/jquery.cookie.js"></script>
         <script src="modules/cookieDisclaimer/js/cookieDisclaimer.js"> </script>
@@ -171,7 +172,7 @@ and open the template in the editor.
                             <div class="row clearfix">
                                 <!--<div class="column">-->
                                     <!-- VERTICAL MENU -->
-                                            <nav id="verticalMenu" class="vertical-menu accordion-element" data-accordion="true" data-title="Vertical Menu">
+                                            <nav id="verticalMenu" class="vertical-menu accordion-element hide" data-accordion="true" data-title="Vertical Menu">
                                                 <a class="item" href="#">
                                                     <i class="fa fa-2x fa-home"></i>
                                                     <span class="item-descr">Home</span>
@@ -207,7 +208,7 @@ and open the template in the editor.
                             <div class="row clearfix">
                                 <!--<div class="column">-->
                                      <!-- CONTACT BOX -->
-                                            <section class="contact-details accordion-element" data-accordion="true" data-title="Contact">
+                                            <section class="contact-details accordion-element hide" data-accordion="true" data-title="Contact">
                                                 <ul> 
                                                      <li>
                                                          <i class="fa fa-2x fa-phone"> </i>
@@ -239,7 +240,7 @@ and open the template in the editor.
                         </div>   
                         <div class="column sub-column-2">
                             <!--  SUBMENU -->
-                                  <ul class="main-menu accordion-element" data-accordion="true" data-title="Submenu">
+                                  <ul class="main-menu accordion-element hide" data-accordion="true" data-title="Submenu">
                                         <li class="main-item first">
                                             <span class="descr">Tech
                                                    <span class="expandable">
@@ -323,7 +324,7 @@ and open the template in the editor.
                            <div class="row row-1 clearfix">
                                 <div class="column">
                                      <!-- SOCIAL MENU -->
-                                        <nav class="social-menu-list clearfix accordion-element" data-accordion="true" data-title="Social Menu">
+                                        <nav class="social-menu-list clearfix accordion-element hide" data-accordion="true" data-title="Social Menu">
                                             <a href="#" class="item">
                                                 <i class="fa fa-x fa-facebook icon"></i>
                                                 Facebook
@@ -350,7 +351,7 @@ and open the template in the editor.
                                 <div class="column">
                                      <div class="row">
                                          <!-- FACEBOOK WIDGET -->
-                                             <div class="social-widget facebook-widget accordion-element" data-accordion="true" data-title="Facebook widget">                
+                                             <div class="social-widget facebook-widget accordion-element hide" data-accordion="true" data-title="Facebook widget">                
                                                     <i class="fa fa-2x fa-facebook social-icon"> </i>                  
                                                     <span class="counter-section" id="noOfLike">
                                                          156K
@@ -363,7 +364,7 @@ and open the template in the editor.
                                      </div>
                                      <div class="row">
                                          <!-- TWITTER WIDGET-->
-                                             <div class="social-widget twitter-widget accordion-element" data-accordion="true" data-title="Twitter widget">
+                                             <div class="social-widget twitter-widget accordion-element hide" data-accordion="true" data-title="Twitter widget">
                                                     <i class="fa fa-2x fa-twitter social-icon"> </i>                
                                                     <span class="counter-section" id="noOfTweets"> 
                                                        89K
@@ -785,32 +786,31 @@ and open the template in the editor.
                          </div>
                          <div class="row row-4 clearfix">
                              <!--<div class="column">-->
-                                 <!-- TABS -->
-                                    <div class="tabs-wrapper clearfix">
+                              <!-- TABS -->
+                               <div class="tabs-wrapper clearfix">
+                                    <input id="about" class="tab" type="radio" name="tabs" />
+                                    <label for="about" class="item-descr">About</label>
 
-                                    <input id="tab1" class="tab" type="radio" name="tabs" />
-                                    <label for="tab1" class="item-descr">About</label>
+                                    <input id="team" class="tab" type="radio" name="tabs" />
+                                    <label for="team" class="item-descr">Team</label>
 
-
-                                    <input id="tab2" class="tab" type="radio" name="tabs" checked/>
-                                    <label for="tab2" class="item-descr">Team</label>
-
-                                    <input id="tab3" class="tab" type="radio" name="tabs" />
-                                    <label for="tab3" class="item-descr">Privacy</label>
+                                    <input id="privacy" class="tab" type="radio" name="tabs" />
+                                    <label for="privacy" class="item-descr">Privacy</label>
 
 
-                                     <input id="tab4" class="tab" type="radio" name="tabs" />
-                                     <label for="tab4" class="item-descr">Advertise</label>
+                                     <input id="advertise" class="tab" type="radio" name="tabs" />
+                                     <label for="advertise" class="item-descr">Advertise</label>
 
-                                     <input id="tab5" class="tab" type="radio" name="tabs" />
-                                     <label for="tab5" class="item-descr">Contact</label>
+                                     <input id="contact" class="tab" type="radio" name="tabs" />
+                                     <label for="contact" class="item-descr">Contact</label>
 
                                       <div class="tabs-content-wrapper clearfix">
-                                           <div id="content1" class="content clearfix">
-                                                 content1
+                                           <div id="aboutContent" class="content clearfix">
+                                                 
                                            </div>
-                                           <div id="content2" class="content clearfix">                        
-                                              <section class="post-section">
+                                           <div id="teamContent" class="content clearfix">  
+                                               
+                                              <!--<section class="post-section">
                                                   <div class="profile">
                                                       <div class="picture-wrapper">
 
@@ -847,16 +847,17 @@ and open the template in the editor.
                                                          @kateupton
                                                       </p>
                                                   </div>
-                                              </section>  
+                                              </section>  -->
+                                              
                                           </div>
-                                           <div id="content3" class="content clearfix">
-                                              content3
+                                           <div id="privacyContent" class="content clearfix">
+                                              
                                           </div>
-                                           <div id="content4" class="content clearfix">
-                                              content4
+                                           <div id="advertiseContent" class="content clearfix">
+                                             
                                           </div>
-                                           <div id="content5" class="content clearfix">
-                                              content5
+                                           <div id="contactContent" class="content clearfix">
+                                              
                                           </div>
                                       </div>    
                                   </div>    
@@ -865,11 +866,8 @@ and open the template in the editor.
                          </div>
                          
                      </div> 
-                </div>  
-               
-               <div class="overlay hide">
-                    
-               </div>
+                </div>                 
             </div>             
+            <div class="overlay hide"></div>        
     </body>
 </html>

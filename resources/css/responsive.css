@@ -202,7 +202,7 @@ and open the template in the editor.
     }
     .tabs-content-wrapper .content{
         padding:31px 5px 37px 15px;
-        background:#fff;
+        background:#fff;     
     }
     .sign-in-wrapper{
         padding:15px 5px;
@@ -232,12 +232,7 @@ and open the template in the editor.
     .social-menu-list{
         padding:20px;
     }
-    .wrapper .row,
-    .wrapper .row .column,.wrapper .row-5 .column-1 .row-1,
-    .wrapper .row-2 .column-2 .row-1 .column:last-child .row:first-of-type,
-    .wrapper .row-2 .column-2 .row-1 .column:last-child .row:last-of-type{
-        background:transparent;
-    }
+  
     .detail-post-wrapper{
         height:auto;
     }
@@ -370,6 +365,8 @@ and open the template in the editor.
     }
     .tabs-content-wrapper .content{
        padding: 30px 5px 25px 15px;
+       height:200px;
+       overflow:scroll;
     }
     .newsletter-wrapper .signup-section .email-address{
         width:100%;
@@ -387,12 +384,14 @@ and open the template in the editor.
 
 @media only screen and (max-width : 640px){
     .horizontal-menu-left{
-        display:none;
         position:absolute;
         background:#fff;
         top:61px;
         z-index:1;
         width:100%;
+    }
+    .horizontal-menu-left.hide{
+       display:none;
     }
     .nav-bar-container{
         position:relative;
@@ -599,10 +598,12 @@ and open the template in the editor.
         color: #fff;
         text-align: center;
     }
-    .accordion-element{
+    .accordion-element.hide{
         display:none;
     }
-    
+    .wrapper .nl-subscribe .title, .wrapper .ask-questions .title{
+        line-height:25px;
+    }
 }
 @media only screen and (max-width : 360px){
     .horizontal-menu-right .search-wrapper.visible .icon.fa-search{
@@ -614,5 +615,12 @@ and open the template in the editor.
     .nav-bar-container .icon{
         width:40px;
     }
+    .wrapper .options-lists {
+        padding:15px 10px;
+    }
+    .wrapper .config{
+        width:100px;
+    }
+   
 }
 

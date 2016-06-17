@@ -4,21 +4,24 @@
  * and open the template in the editor.
  */
 
-$(document).ready(function(){
-    $("#searchIcon").click(function(){         
-        $(this).parent().toggleClass('visible');        
-    });
-    
-    $("#searchText").focusin(function(){
-        $("#submitSearch").toggleClass("visible");
-    });
+
+var menuHorizontalClass = function(){
+    var menuContainer       =  $(".nav-bar-container"),
+        menuBarIcon         =  menuContainer.find(".menu-bar-icon"),  
+        extern              =  {};
+
+    var attachHandlers = function(){
+        menuBarIcon.click(function(){
+            var horizontalMenuLeft = menuContainer.find(".horizontal-menu-left");           
+            horizontalMenuLeft.toggleClass("hide");
+        });        
+    };  
      
-    $("#searchText").focusout(function(){
-        $("#submitSearch").toggleClass("hide");
-    });
-    $(".menu-bar-icon").click(function(){
-        $(".horizontal-menu-left").toggle();
-    });    
-    
-});
+    var _init  =  function(){
+        attachHandlers();
+    };   
+        
+     _init(); 
+};
+
 

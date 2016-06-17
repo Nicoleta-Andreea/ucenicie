@@ -28,9 +28,12 @@ and open the template in the editor.
     cursor:pointer;
 }
 .nav-bar-container .icon.menu-bar-icon,
-.horizontal-menu-right .submit-search:hover,
-.horizontal-menu-right .submit-search:focus,
-.horizontal-menu-right .submit-search:active{     
+.horizontal-menu-right .search-wrapper .submit-search:hover,
+.horizontal-menu-right .search-wrapper .submit-search:focus,
+.horizontal-menu-right .search-wrapper .submit-search:active,
+.horizontal-menu-right .search-wrapper.visible .submit-search:hover,
+.horizontal-menu-right .search-wrapper.visible .submit-search:focus,
+.horizontal-menu-right .search-wrapper.visible .submit-search:active{     
     background:#56ccc8;
     color:#fff;    
 }
@@ -66,7 +69,11 @@ and open the template in the editor.
      color:#475055; 
 }
 .horizontal-menu-left{
+    display:block;
     float:left;
+}
+.horizontal-menu-left.hide{
+    display:block;
 }
 .horizontal-menu-left .item .item-descr:hover,
 .horizontal-menu-left .item .item-descr:active,
@@ -115,24 +122,50 @@ and open the template in the editor.
 }
 .horizontal-menu-right .visible .search-text{
     display:block;
+    z-index:0;
 }
-.horizontal-menu-right .submit-search{
+.horizontal-menu-right .search-wrapper .submit-search{
     position: absolute;
-    top: 60px;
-    left: 23px;
+    top:0px;
+    height:60px;
     width: 177px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 0px 0px 30px 30px;
+    line-height:60px;
+    border-radius:0; 
     background: #fff;
     border: 1px solid #dde2e4;
     cursor: pointer;
     color:#475055;
     z-index:3;
 }
+.horizontal-menu-right .search-wrapper.visible .submit-search{   
+    left:201px;  
+}
 .horizontal-menu-right .search-text:focus{              
      color:#475055;
      font-style:normal;
+}
+.search-results .list-item-content{
+    overflow: hidden;
+    position: relative;
+    line-height:1.2em;
+    max-height:1.2em;
+    padding:0 1em 0 0;
+    width:295px;
+}
+.search-results .list-item-content:before{
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.search-results .list-item-content:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin:0.2em 0 0 0;
+    background:#fff; 
 }
 .search-results{
     position:absolute;
@@ -157,17 +190,14 @@ and open the template in the editor.
     width:50px;
     height:50px;
 }
-.search-results .search-results-list .list-item-content{
-    width:280px;
-    line-height:25px;
-}
 .search-results .search-results-list .image-section,
 .search-results .search-results-list .list-item-content{
     float:left;
     margin:0 10px 0 0;
     cursor:pointer;
 }
-.search-results .search-results-list .fa-info{
+.search-results .search-results-list .info{
+    background:url(../../../resources/images/info.svg);
     cursor:pointer;
     float:right;
     height:25px;
@@ -176,4 +206,8 @@ and open the template in the editor.
     line-height:25px;
     text-align:center;
     border-radius:50%;
+    transition:transform 5s ease-in-out;   
+}
+.search-results .search-results-list .info.loading{     
+      transform:rotate(360deg);
 }

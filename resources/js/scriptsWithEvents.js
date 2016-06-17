@@ -11,13 +11,9 @@ $(document).ready(function(){
         initConfigGeneral     =  new configGeneralScriptClass(),
         
         initCookieDisclaimer  =  new initCookieDisclaimerClass(),  
+        initHorizontalMenu    =  new menuHorizontalClass(),
         initSearch            =  new searchClass(),
-        initAccordion         =  new initAccordionClass();        
-       
-        /*url                   =  initConfig.setActionUrl("nl_subscription"),   
-         *       ConfigObject          =  {"url": url},  */        
-        /*url                   =  initConfig.setActionUrl("ask_questions"),            
-        ConfigObject          =  {"url": url}, */
-    
+        initAccordion         =  new initAccordionClass(),    
+        initTabs              =  new tabsClass();  
          
 });

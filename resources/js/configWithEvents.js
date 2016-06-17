@@ -117,18 +117,28 @@ var initConfigClass = function(){
             type:"setUrl",
             url:configObject
       });
-    };    
-     
+    };      
+    
     var attachHandlers = function(){      
        $.each(options,function(){
            $(this).change(changeOption);             
        });                
     };
     
+    var hideMessageContainer = function(data){
+        messageContainer = data.messageContainer;
+        $(messageContainer).addClass("hide");
+    };
+    
+    var showMessagecontainer = function(data){
+        messageContainer = data.messageContainer;
+        $(messageContainer).removeClass("hide");
+    };   
     
     var _init = function(){  
        $("body").bind("setData",setData);
-       
+       $("body").bind("hideMessageContainer",hideMessageContainer);
+       $("body").bind("showMessagecontainer",showMessagecontainer);       
        $("body").bind("iterateOptions",function(){
            iterateOptions();
        });
